@@ -1,113 +1,31 @@
-import Image from 'next/image'
+import { Button } from '@/components/globals/button'
+import { Unbounded } from 'next/font/google'
+
+const unbounded = Unbounded({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+    <main className="">
+      <section className="hero relative w-[100vw]" id="hero">
+        <svg className="absolute right-0 lg:block hidden" width="348" height="624" viewBox="0 0 348 624" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_305_72)">
+            <path d="M564.52 568.221L481.262 623.462L348.325 414.911L348 414.402L347.675 414.911L214.745 623.462L131.48 568.221L167.787 483.168L168.368 481.805L167.197 482.712L91.2018 541.53L0.529054 481.404L95.9264 332.938L207.008 312.16L207.006 311.403L99.2823 291.769L6.29926 136.092L96.1303 80.5258L166.451 134.68L167.388 135.402L167.055 134.267L142.816 51.5756L225.253 0.534097L347.669 207.315L348 207.874L348.331 207.315L470.747 0.534084L553.184 51.5756L528.945 134.267L528.612 135.402L529.549 134.68L599.87 80.5258L689.701 136.092L596.625 291.769L488.994 311.403L488.992 312.16L600.081 332.938L695.471 481.404L604.806 541.53L528.803 482.712L527.632 481.806L528.213 483.168L564.52 568.221Z" stroke="#97FF80" strokeWidth="0.770026" />
+          </g>
+          <defs>
+            <clipPath id="clip0_305_72">
+              <rect width="348" height="624" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+        <svg className="lg:hidden" width="696" height="624" viewBox="0 0 696 624" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M564.52 568.221L481.262 623.462L348.325 414.911L348 414.402L347.675 414.911L214.745 623.462L131.48 568.221L167.787 483.168L168.368 481.805L167.197 482.712L91.2018 541.53L0.529054 481.404L95.9264 332.938L207.008 312.16L207.006 311.403L99.2823 291.769L6.29926 136.092L96.1303 80.5258L166.451 134.68L167.388 135.402L167.055 134.267L142.816 51.5756L225.253 0.534097L347.669 207.315L348 207.874L348.331 207.315L470.747 0.534084L553.184 51.5756L528.945 134.267L528.612 135.402L529.549 134.68L599.87 80.5258L689.701 136.092L596.625 291.769L488.994 311.403L488.992 312.16L600.081 332.938L695.471 481.404L604.806 541.53L528.803 482.712L527.632 481.806L528.213 483.168L564.52 568.221Z" stroke="#97FF80" strokeWidth="0.770026" />
+        </svg>
+        <h1>crafting timeless designs, <br />one pixel at a time.</h1>
+        <Button children="Get Started" />
+      </section>
     </main>
   )
 }
