@@ -15,6 +15,11 @@ body {
   overflow-x: hidden;
 }
 
+section {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
 h1,
 h2,
 h3 {
@@ -22,4 +27,12 @@ h3 {
   font-weight: 400;
 
   margin-bottom: var(--elem-spacer-nm);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.375rem);
+}
+
+h2 {
+  font-size: clamp(1.25rem, 2vw + 1rem, 3.438rem);
 }

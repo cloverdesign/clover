@@ -7,10 +7,18 @@ module.exports = {
   ],
   theme: {
     colors: {
+      'white': '#FFFFFF',
+      'black': '#000000',
       'green': {
         500: '#97FF80',
       }
     },
+
+    fontFamily: {
+      'display': 'var(--font-unbounded)',
+      'body': 'var(--font-lexend)',
+    },
+
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
