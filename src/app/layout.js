@@ -3,9 +3,10 @@
 import './globals.css'
 import { Lexend, Unbounded } from 'next/font/google'
 import { Nav } from './nav';
+import { Footer } from './footer';
 
 const lexend = Lexend({
-  weight: ['400', '700'],
+  weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-lexend',
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <Nav />
         {/* Pages Routes */}
         {children}
+        <Footer />
       </body>
     </html>
   )

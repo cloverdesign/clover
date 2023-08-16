@@ -10,14 +10,9 @@ body {
   background-color: black;
   color: white;
   font-size: 16px;
-  font-weight: 400;
-
+  font-family: var(--font-lexend);
+  font-weight: 400 !important;
   overflow-x: hidden;
-}
-
-section {
-  height: 100vh;
-  overflow-y: hidden;
 }
 
 h1,
@@ -30,9 +25,17 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw + 1rem, 4.375rem);
+  font-size: clamp(2.375rem, 1.625rem + 3.75vw, 5rem);
 }
 
 h2 {
-  font-size: clamp(1.25rem, 2vw + 1rem, 3.438rem);
+  font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(0.9375rem, 0.6696rem + 1.3393vw, 1.875rem);
+}
+
+button:hover {
+  filter: drop-shadow(0 20px 13px rgba(151, 255, 128, 0.09)) drop-shadow(0 8px 5px rgb(151, 255, 128, 0.1));
 }
