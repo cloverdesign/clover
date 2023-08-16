@@ -10,7 +10,6 @@ export const Nav = () => {
     const [showNav, setShowNav] = useState(false)
 
     const pathname = usePathname();
-    const hash = window.location.hash
 
     let isMobile = useMediaQuery('(max-width: 768px)')
 
@@ -111,11 +110,11 @@ export const Nav = () => {
     const navItems = [
         {
             id: 1,
-            name: "#home",
+            name: "home",
         },
         {
             id: 2,
-            name: "#work",
+            name: "work",
         },
         {
             id: 3,
@@ -139,7 +138,7 @@ export const Nav = () => {
         <motion.aside variants={mobileMenuVariant} className={`h-[100vh] w-[100vw] bg-green-500 absolute top-0 right-0 flex items-center justify-center`}>
             <Icon.HiOutlineX color="#000000" size={24} onClick={handleToggleNav} className="absolute right-0 top-0 m-[20px]" />
             <motion.ul variants={ulVariant} className="flex-col text-black text-3xl space-y-8 font-semibold font-display">
-                {navItems.map((item) => (<motion.li variants={navItemsVariants} className="hover:font-normal hover:cursor-pointer uppercase" key={item.id}><Link href={`/${item.name}`}>{item.name.split('#')}</Link></motion.li>))}
+                {navItems.map((item) => (<motion.li variants={navItemsVariants} className="hover:font-normal hover:cursor-pointer uppercase" key={item.id}><Link href={`/${item.name === 'home' ? "" : item.name}`}>{item.name}</Link></motion.li>))}
             </motion.ul>
         </motion.aside>
     </motion.nav>
@@ -153,8 +152,8 @@ export const Nav = () => {
         <svg className="fill-white w-[35px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 904.01 856.44"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><polygon points="785.53 743.9 686.53 662.94 733.85 780.08 624.94 856.44 452 569.75 279.07 856.44 170.15 780.08 217.47 662.94 118.48 743.9 0 660.88 124.29 456.48 268.78 427.92 128.64 400.93 7.5 186.61 124.89 109.88 216.5 184.43 184.91 70.55 292.74 0 452 284.27 611.26 0 719.09 70.55 687.5 184.43 779.11 109.88 896.5 186.61 775.24 400.93 635.22 427.92 779.72 456.48 904 660.88 785.53 743.9" /></g></g></svg>
         <ul className="flex gap-6 font-display">
             {navItems.map((item) => {
-                const isActive = hash === item.name
-                return (<motion.li variants={navItemsVariants} whileHover="hovered" className={`hover:font-normal hover:cursor-pointer uppercase`} key={item.id}><Link href={`/${item.name}`} className={`${isActive ? 'text-green-500' : ''}`} >{item.name.split('#')}</Link></motion.li>)
+                const isActive = pathname === item.name
+                return (<motion.li variants={navItemsVariants} whileHover="hovered" className={`hover:font-normal hover:cursor-pointer uppercase`} key={item.id}><Link href={`/${item.name === 'home' ? "" : item.name}`} className={`${isActive ? 'text-green-500' : ''}`} >{item.name}</Link></motion.li>)
             })
             }
         </ul>
