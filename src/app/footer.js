@@ -43,7 +43,7 @@ export const Footer = () => {
 
     return (
         <footer className="w-[100vw] lg:h-[100vh] relative">
-            <section className="flex flex-col items-center gap-9 h-fit lg:h-fit w-full bg-black absolute top-0 z-10">
+            <section className="flex flex-col items-center gap-9 h-fit lg:h-4/5 w-full bg-black absolute top-0 z-10">
                 <div className="flex flex-col lg:flex-row items-center py-[100px] justify-center gap-9 border-b-[1px] w-full border-white">
                     <h2>Ready to take <br />your brand to <br /> the next level?</h2>
                     <div className="flex items-center gap-4">
