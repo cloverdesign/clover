@@ -10,7 +10,7 @@ export const Projects = () => {
         <section className="flex flex-col w-[100vw] items-center lg:space-y-[140px] space-y-9 pt-[100px]">
             <div className='flex flex-col lg:flex-row  lg:items-center justify-between w-full lg:px-12 px-5'>
                 <h2>Our Works</h2>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 z-10">
                     View All Projects
                     <Button icon={<Icon.HiArrowRight className='lg:text-base text-[8px]' />} iconOnly variant="primary-outline" />
                 </div>

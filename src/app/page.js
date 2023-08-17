@@ -5,6 +5,7 @@ import { Hero } from '@/components/hero'
 import { Projects } from '@/components/projects'
 import { Reviews } from '@/components/reviews'
 import { Who } from '@/components/who'
+import { Services } from "@/components/services";
 
 export default function Home() {
   const targetRef = useRef(null);
@@ -21,6 +22,7 @@ export default function Home() {
       <Hero />
       <Who />
       <Projects />
+      <Services />
       <Reviews />
     </main>
   )
