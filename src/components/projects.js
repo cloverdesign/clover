@@ -1,28 +1,10 @@
+'use client'
 import * as Icon from 'react-icons/hi'
-import { Button } from './globals/button'
 import { ProjectsData } from '@/data/projects'
-import { useRouter } from 'next/navigation'
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useInView } from "react-intersection-observer";
-import { useRef } from 'react'
+import { motion } from 'framer-motion'
+import { Button } from './globals/button'
 
 export const Projects = () => {
-    const router = useRouter()
-    const handleNavigateToAllProjects = () => {
-        router.push('/works')
-    }
-
-    const { scrollY } = useScroll();
-    const y1 = useTransform(scrollY, [0, 300], [0, 200]);
-    const y2 = useTransform(scrollY, [0, 300], [0, -100]);
-
-    const [ref, inView, entry] = useInView({
-        /* Optional options */
-        threshold: 0.5,
-        triggerOnce: false
-    });
-
-    const scale = useTransform(scrollY, [0, 0.5], ["100%", "120%"]);
 
     return (
         <section className="flex flex-col w-[100vw] items-center space-y-[140px] lg:px-12 px-5">
@@ -30,7 +12,7 @@ export const Projects = () => {
                 <h2>Our Works</h2>
                 <div className="flex items-center gap-4">
                     View All Projects
-                    <Button icon={<Icon.HiArrowRight />} iconOnly onClick={handleNavigateToAllProjects} />
+                    <Button icon={<Icon.HiArrowRight />} iconOnly variant="primary-outline" />
                 </div>
             </div>
 
@@ -39,7 +21,7 @@ export const Projects = () => {
                     <motion.div
                         style={{
                             backgroundImage: `url(${project.imageUrl})`,
-                            backgroundSize: scale,
+                            backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
                         }}

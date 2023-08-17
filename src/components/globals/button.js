@@ -2,7 +2,7 @@ export const Button = ({ children, variant, widthFull, icon, iconOnly, onClick }
     return (
         <button
             onClick={onClick}
-            className={`${variant === 'primary-outline' ? 'border-[1px] border-white text-white hover:border-green-500 hover:bg-green-500 hover:text-black' : variant === 'primary-black' ? 'bg-black text-white hover:bg-white hover:text-black' : 'bg-white text-black hover:bg-green-500 hover:text-black'} p-[10px] rounded-lg font-body ${widthFull ? 'w-[210px]' : 'w-fit'} `}
+            className={`${variant === 'primary-outline' ? 'border-[1px] border-white text-white hover:border-green-500 hover:bg-green-500 hover:text-black' : variant === 'primary-black' ? 'bg-black text-white hover:bg-white hover:text-black' : variant === 'default' ? 'bg-white text-black hover:bg-green-500 hover:text-black' : ''} p-[10px] rounded-lg font-body ${widthFull ? 'w-[210px]' : 'w-fit'} `}
         >
             {iconOnly ? icon
                 :
