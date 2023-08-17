@@ -43,7 +43,7 @@ export const Footer = () => {
 
     return (
         <footer className="w-[100vw] lg:h-[100vh] relative">
-            <section className="flex flex-col items-center gap-9 h-fit lg:h-[85%] w-full lg:rounded-b-[100px] rounded-b-[30px] bg-black absolute top-0 z-10">
+            <section className="flex flex-col items-center gap-9 h-fit lg:h-fit w-full bg-black absolute top-0 z-10">
                 <div className="flex flex-col lg:flex-row items-center py-[100px] justify-center gap-9 border-b-[1px] w-full border-white">
                     <h2>Ready to take <br />your brand to <br /> the next level?</h2>
                     <div className="flex items-center gap-4">
@@ -51,7 +51,7 @@ export const Footer = () => {
                         <Button icon={<Icon.HiArrowRight />} iconOnly variant="primary-outline" />
                     </div>
                 </div>
-                <div className="flex items-center justify-around w-full py-[20px]">
+                <div className="flex items-center justify-around w-full p-8">
                     <div className="f">
                         <h2>Contact</h2>
                         <Icon.HiPhone />
