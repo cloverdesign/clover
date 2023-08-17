@@ -1,4 +1,5 @@
 import helggImg from '@/assets/hellg.jpg'
+import helggVideo from '@/assets/helgg.json'
 
 export const ProjectsData = [
     {
@@ -7,6 +8,7 @@ export const ProjectsData = [
         description: "Helgg Scooters LTD",
         tags: ["Branding"],
         imageUrl: helggImg.src,
+        videoUrl: helggVideo,
     },
     {
         id: 2,

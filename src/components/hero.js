@@ -21,7 +21,7 @@ export const Hero = () => {
             className="hero w-[100vw] h-[100vh] relative"
         >
             <motion.div
-                className="fixed lg:top-[30%] top-[20%] right-0 flex flex-col items-center justify-center space-y-8 w-full"
+                className="fixed lg:top-[30%] top-[20%] right-0 flex flex-col items-center justify-center space-y-8 w-full z-0"
             >
                 <svg className="absolute right-0 lg:block hidden" width="348" height="624" viewBox="0 0 348 624" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clipPath="url(#clip0_305_72)">

@@ -14,7 +14,7 @@ export const Who = () => {
 
     return (
         <motion.section
-            className="w-[100vw] h-[100vh] text-black bg-green-500 z-10 lg:rounded-t-[100px] rounded-t-[30px]"
+            className="w-[100vw] h-[100vh] text-black bg-green-500 z-20 lg:rounded-t-[100px] rounded-t-[30px]"
         >
             <motion.div
                 ref={targetRef}
