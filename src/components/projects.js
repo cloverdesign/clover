@@ -3,9 +3,10 @@ import * as Icon from 'react-icons/hi'
 import { ProjectsData } from '@/data/projects'
 import { motion } from 'framer-motion'
 import { Button } from './globals/button'
+import { useRouter } from 'next/navigation'
 
 export const Projects = () => {
-
+    const router = useRouter()
     return (
         <section className="flex flex-col w-[100vw] items-center lg:space-y-[140px] space-y-9 pt-[100px]">
             <div className='flex flex-col lg:flex-row  lg:items-center justify-between w-full lg:px-12 px-5'>
@@ -17,17 +18,22 @@ export const Projects = () => {
             </div>
 
             {ProjectsData.map((project, index) => (
-                <div className='flex flex-col w-full space-y-4' key={project.id}>
-                    <motion.div
-                        style={{
-                            backgroundImage: `url(${project.imageUrl})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                        }}
-                        className='w-full lg:h-[500px] h-[200px]'
-                    >
-                    </motion.div>
+                <div className='flex flex-col w-full lg:px-12 px-5 space-y-4' key={project.id}>
+                    <div className='lg:h-[500px] h-[200px] rounded-xl overflow-hidden'>
+                        <motion.div
+                            style={{
+                                backgroundImage: `url(${project.imageUrl})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                backgroundRepeat: 'no-repeat',
+                            }}
+                            initial={{ scale: 1 }}
+                            whileHover={{ scale: 1.03, transition: { duration: 1 } }}
+                            className='w-full h-full hover:cursor-pointer'
+                            onClick={() => router.push(project?.link)}
+                        >
+                        </motion.div>
+                    </div>
                     <div className='flex items-center justify-between w-full lg:px-12 px-5'>
                         <div className='flex flex-col lg:flex-row lg:items-center items-start lg:gap-4'>
                             <h3 className='bg-black'>{project.title}</h3>
