@@ -2,7 +2,7 @@
 export const ServicesData = [
     {
         id: 1,
-        title: "Design",
+        title: "Graphic Design",
     },
     {
         id: 2,
@@ -10,6 +10,14 @@ export const ServicesData = [
     },
     {
         id: 3,
-        title: "Strategy",
+        title: "Branding",
+    },
+    {
+        id: 4,
+        title: "Strategy*",
+    },
+    {
+        id: 5,
+        title: "Event Theming"
     }
 ]
