@@ -54,7 +54,7 @@ export const Hero = () => {
         <motion.section
             ref={targetRef}
             style={{ opacity }}
-            className="hero w-[100vw] h-[100vh] relative overflow-hidden"
+            className="hero p-[40px] w-[100vw] h-[100vh] relative overflow-hidden"
         >
             <motion.div
                 style={{ position }}
