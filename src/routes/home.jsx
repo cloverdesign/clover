@@ -1,4 +1,5 @@
 import { Hero } from "../components/home/hero"
+import { Meet } from "../components/home/meet"
 import { OurWorks } from "../components/home/ourworks"
 import { Services } from "../components/home/services"
 import { Testimonials } from "../components/home/testimonials"
@@ -12,6 +13,7 @@ export const Home = () => {
             <OurWorks />
             <Services />
             <Testimonials />
+            <Meet />
         </>
     )
 }

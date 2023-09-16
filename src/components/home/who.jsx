@@ -22,7 +22,7 @@ export const Who = () => {
                 <h2 className="lg:w-3/5 w-2/3 text-center">A diverse design agency passionate about creating digital experiences.</h2>
                 <div className="flex items-center gap-4">
                     who we are.
-                    <Links icon={<Icon.HiArrowRight />} iconOnly variant="primary-black" />
+                    <Links icon={<Icon.HiArrowRight />} variant="primary-black" />
                 </div>
             </motion.div>
         </motion.section>

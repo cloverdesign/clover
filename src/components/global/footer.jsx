@@ -48,7 +48,7 @@ export const Footer = () => {
                     <h2>Ready to take <br />your brand to <br /> the next level?</h2>
                     <div className="flex items-center gap-4">
                         <p>Let's Collaborate</p>
-                        <Links icon={<Icon.HiArrowRight />} iconOnly variant="primary-outline" url="/contact" />
+                        <Links icon={<Icon.HiArrowRight />} variant="primary-outline" url="/contact" />
                     </div>
                 </div>
                 <div className="flex items-center justify-around w-full p-8">
