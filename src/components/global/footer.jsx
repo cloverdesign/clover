@@ -1,4 +1,5 @@
-import * as Icon from "react-icons/hi"
+import * as Icon from "react-icons/pi"
+import * as HeroIcons from "react-icons/hi"
 import image from '../../assets/full.svg'
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
@@ -42,25 +43,29 @@ export const Footer = () => {
     ]
 
     return (
-        <footer className="w-[100vw] lg:h-[100vh] mt-[100px] relative">
-            <section className="flex flex-col items-center gap-9 h-fit lg:h-4/5 w-full bg-black absolute top-0 z-10">
-                <div className="flex flex-col lg:flex-row items-center py-[100px] justify-center gap-9 border-b-[1px] w-full border-white">
+        <footer className="w-[100vw] lg:h-[100vh] relative">
+            <section className="flex flex-col items-center h-fit lg:h-4/5 w-full bg-black absolute top-0 rounded-b-[114px] z-10">
+                <div className="flex flex-col lg:flex-row items-center py-[50px] justify-center gap-9 border-b-[1px] w-full border-white">
                     <h2>Ready to take <br />your brand to <br /> the next level?</h2>
                     <div className="flex items-center gap-4">
                         <p>Let's Collaborate</p>
-                        <Links icon={<Icon.HiArrowRight />} variant="primary-outline" url="/contact" />
+                        <Links icon={<HeroIcons.HiArrowRight />} variant="primary-outline" url="/contact" />
                     </div>
                 </div>
-                <div className="flex items-center justify-around w-full p-8">
-                    <div className="f">
-                        <h2>Contact</h2>
-                        <Icon.HiPhone />
-                        <Icon.HiMail />
+                <div className="flex flex-col md:flex-row items-center justify-around gap-9 h-full w-full p-8">
+                    <div className="flex items-center gap-3 ">
+                        <a href="https://twitter.com/cloverdesignhq" target="_blank"><Icon.PiTwitterLogoFill size={36} className="hover:text-green-500" /></a>
+                        <a href="https://medium.com/@cloverdesignhq" target="_blank"><Icon.PiMediumLogoFill size={36} className="hover:text-green-500" /></a>
+                        <a href="https://www.instagram.com/clover.hq" target="_blank"><Icon.PiInstagramLogoFill size={36} className="hover:text-green-500" /></a>
+                        <a href="https://www.linkedin.com/company/clover-designhq" target="_blank"><Icon.PiLinkedinLogoFill size={36} className="hover:text-green-500" /></a>
                     </div>
 
                     <div>
                         <ul>
                             {navItems.map((item) => (<motion.li className="hover:font-normal hover:text-green-500 text-grey hover:cursor-pointer uppercase" key={item.id}><Link to={`${item.path}`}>{item.name}</Link></motion.li>))}
+                            <motion.li className="hover:font-normal hover:text-green-500 text-grey hover:cursor-pointer uppercase">
+                                <a href="https://medium.com/@cloverdesignhq" target="_blank">blog</a>
+                            </motion.li>
                         </ul>
                     </div>
                 </div>

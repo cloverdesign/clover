@@ -146,6 +146,9 @@ export const Nav = () => {
                         <Link to={`${item.path}`} onClick={handleToggleNav}>{item.name}</Link>
                     </motion.li>
                     ))}
+                    <motion.li variants={navItemsVariants} className="hover:cursor-pointer hover:text-white uppercase flex items-center justify-center text-left w-full">
+                        <a href="https://medium.com/@cloverdesignhq" target="_blank">blog</a>
+                    </motion.li>
                 </motion.ul>
             </motion.aside>
 
