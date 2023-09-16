@@ -6,6 +6,11 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      'display': ['Unbounded', 'sans-serif'],
+      'body': ['Lexend', 'sans-serif'],
+    },
+
     colors: {
       'white': '#FFFFFF',
       'grey': '#C6C6C6',
@@ -13,11 +18,6 @@ module.exports = {
       'green': {
         500: '#97FF80',
       }
-    },
-
-    fontFamily: {
-      'display': 'var(--font-unbounded)',
-      'body': 'var(--font-lexend)',
     },
 
     extend: {

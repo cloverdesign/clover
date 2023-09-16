@@ -1,12 +1,12 @@
-"use client"
-import { Button } from "@/components/globals/button"
 import * as Icon from "react-icons/hi"
-import image from '@/assets/full.svg'
-import { useRef } from "react";
+import image from '../../assets/full.svg'
 import { useScroll, useTransform, motion } from "framer-motion";
-import Link from "next/link";
+import { useRef } from "react";
+import { Link } from "react-router-dom";
+import { Links } from "./links";
 
 export const Footer = () => {
+
     const targetRef = useRef(null);
 
     const { scrollYProgress } = useScroll({
@@ -48,7 +48,7 @@ export const Footer = () => {
                     <h2>Ready to take <br />your brand to <br /> the next level?</h2>
                     <div className="flex items-center gap-4">
                         <p>Let's Collaborate</p>
-                        <Button icon={<Icon.HiArrowRight />} iconOnly variant="primary-outline" />
+                        <Links icon={<Icon.HiArrowRight />} iconOnly variant="primary-outline" url="/contact" />
                     </div>
                 </div>
                 <div className="flex items-center justify-around w-full p-8">
@@ -60,7 +60,7 @@ export const Footer = () => {
 
                     <div>
                         <ul>
-                            {navItems.map((item) => (<motion.li className="hover:font-normal hover:text-green-500 text-grey hover:cursor-pointer uppercase" key={item.id}><Link href={`${item.path}`}>{item.name}</Link></motion.li>))}
+                            {navItems.map((item) => (<motion.li className="hover:font-normal hover:text-green-500 text-grey hover:cursor-pointer uppercase" key={item.id}><Link to={`${item.path}`}>{item.name}</Link></motion.li>))}
                         </ul>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ export const Footer = () => {
                     <p className="text-black">© 2023 Clover, All Rights Reserved.</p>
                 </div>
 
-                <motion.img style={{ y, scale }} src={image.src} alt="" className=" absolute w-full bottom-[-20%]" />
+                <motion.img style={{ y, scale }} src={image} alt="" className=" absolute w-full bottom-[-20%]" />
             </motion.div>
 
         </footer>

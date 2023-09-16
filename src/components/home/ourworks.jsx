@@ -1,14 +1,11 @@
-'use client'
 import * as Icon from 'react-icons/hi'
-import { ProjectsData } from '@/data/projects'
+import { WorksData } from '../../data/worksdata'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import { Button } from './globals/button'
-import { useRouter } from 'next/navigation'
+import { Links } from '../global/links'
 import { useRef } from 'react'
+import helggImg from '../../assets/helgg.jpg'
 
-export const Projects = () => {
-    const router = useRouter()
-
+export const OurWorks = () => {
     const targetRef = useRef(null);
     const containerRef = useRef(null);
 
@@ -17,7 +14,7 @@ export const Projects = () => {
         offset: ["start end", "start start"],
     });
 
-    console.log(scrollYProgress)
+    console.log(WorksData)
 
     const y = useTransform(scrollYProgress, [0, 1], ["-50%", "220%"]);
 
@@ -42,12 +39,12 @@ export const Projects = () => {
             <motion.div className='bg-black h-full w-full' />
 
             <div className='w-full z-[2] flex flex-col gap-8' ref={containerRef}>
-                {ProjectsData.map((project) => (
+                {WorksData.map((project) => (
                     <div className='flex flex-col w-full lg:px-12 px-5 space-y-4' key={project.id}>
                         <div className='lg:h-[500px] h-[200px] rounded-xl overflow-hidden'>
                             <motion.div
                                 style={{
-                                    backgroundImage: `url(${project.imageUrl})`,
+                                    backgroundImage: `url(${project.img})`,
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     backgroundRepeat: 'no-repeat',
@@ -55,7 +52,6 @@ export const Projects = () => {
                                 initial={{ scale: 1 }}
                                 whileHover={{ scale: 1.03, transition: { duration: 1 } }}
                                 className='w-full h-full hover:cursor-pointer'
-                                onClick={() => router.push(project?.link)}
                             >
                             </motion.div>
                         </div>
@@ -74,7 +70,7 @@ export const Projects = () => {
 
             <div className="flex items-center gap-4 z-10">
                 View All Projects
-                <Button icon={<Icon.HiArrowRight className='lg:text-base text-[8px]' />} iconOnly variant="primary-outline" />
+                <Links icon={<Icon.HiArrowRight className='lg:text-base text-[8px]' />} iconOnly variant="primary-outline" />
             </div>
         </section>
     )

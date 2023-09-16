@@ -1,9 +1,6 @@
-import { useMediaQuery } from "@/hooks/useMediaQuery"
-import { useEffect, useRef, useState } from "react"
-import * as Icon from 'react-icons/hi'
+import { useState } from "react"
 import { AnimatePresence, motion } from 'framer-motion'
-import Link from "next/link"
-import { usePathname } from 'next/navigation'
+import { Link } from "react-router-dom"
 
 export const Nav = () => {
     const [showMenu, setShowMenu] = useState(false)
@@ -92,7 +89,7 @@ export const Nav = () => {
         },
         {
             id: 2,
-            path: "/work",
+            path: "/works",
             name: "our work",
         },
         {
@@ -139,14 +136,14 @@ export const Nav = () => {
                     </svg>
                 </AnimatePresence>
 
-                <Link href="/contact" className="font-display uppercase justify-self-end hidden lg:block hover:text-green-500">Contact</Link>
+                <Link to="/contact" className="font-display uppercase justify-self-end hidden lg:block hover:text-green-500">Contact</Link>
             </div>
 
             <motion.aside variants={mobileMenuVariant} className={`h-[100vh] w-[100vw] bg-green-500 absolute top-0 right-0 flex items-center justify-center`}>
                 <motion.ul variants={ulVariant} className="flex-col text-black lg:text-6xl text-3xl space-y-8 font-semibold font-display w-full">
                     {navItems.map((item) =>
                     (<motion.li variants={navItemsVariants} className="hover:cursor-pointer hover:text-white uppercase flex items-center justify-center text-left w-full" key={item.id}>
-                        <Link href={`${item.path}`}>{item.name}</Link>
+                        <Link to={`${item.path}`} onClick={handleToggleNav}>{item.name}</Link>
                     </motion.li>
                     ))}
                 </motion.ul>

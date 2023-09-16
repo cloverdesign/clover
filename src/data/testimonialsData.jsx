@@ -9,7 +9,7 @@ export const TestimonialsData = [
 
     {
         id: 2,
-        title: "Mofope - Organiser",
+        title: "Mofope",
         company: "TEDxCovenant University",
         text: "Clover was contacted to create a brand identity for TEDxCovenantUniversity. Prior to contacting them, we had a huge challenge creating and getting our brand identity. However, they got on board, it was a light bulb moment. I particularly loved how they paid attention to details and their excellent customer ser-vice. I highly recommend Clover to anyone looking for an agency that delivers excellently."
     },

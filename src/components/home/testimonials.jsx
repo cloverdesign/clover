@@ -1,8 +1,8 @@
-import { TestimonialsData } from "@/data/reviews";
-import { useScroll, useTransform, motion, useSpring } from "framer-motion";
+import { TestimonialsData } from "../../data/testimonialsData";
+import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
-export const Reviews = () => {
+export const Testimonials = () => {
     const ref = useRef(null);
     const containerRef = useRef(null);
 
@@ -33,7 +33,7 @@ export const Reviews = () => {
                             style={{ position }}
                             ref={ref}
                         >
-                            <p className="font-bold">{testimonial.title} <span className="font-bold">{testimonial.company}</span></p>
+                            <p className="font-bold">{testimonial.title} - <span className="font-bold">{testimonial.company}</span></p>
                             <p className="text-sm">"{testimonial.text}"</p>
                         </motion.div>
                     ))

@@ -1,27 +1,27 @@
-import helggImg from '@/assets/hellg.jpg'
-import helggVideo from '@/assets/helgg.json'
+import helggImg from '../assets/helgg.jpg'
 
-export const ProjectsData = [
+console.log(helggImg)
+
+export const WorksData = [
     {
         id: 1,
         title: "Helgg",
         description: "Helgg Scooters LTD",
         tags: ["Branding"],
-        imageUrl: helggImg.src,
-        videoUrl: helggVideo,
+        img: helggImg,
     },
     {
         id: 2,
         title: "Helgg",
         description: "Helgg Scooters LTD",
         tags: ["Branding"],
-        imageUrl: helggImg.src,
+        img: helggImg,
     },
     {
         id: 3,
         title: "Helgg",
         description: "Helgg Scooters LTD",
         tags: ["Branding"],
-        imageUrl: helggImg.src,
+        img: helggImg,
     }
 ]
