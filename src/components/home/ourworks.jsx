@@ -3,7 +3,6 @@ import { WorksData } from '../../data/worksdata'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Links } from '../global/links'
 import { useRef } from 'react'
-import helggImg from '../../assets/helgg.jpg'
 
 export const OurWorks = () => {
     const targetRef = useRef(null);
@@ -13,8 +12,6 @@ export const OurWorks = () => {
         target: targetRef,
         offset: ["start end", "start start"],
     });
-
-    console.log(WorksData)
 
     const y = useTransform(scrollYProgress, [0, 1], ["-50%", "220%"]);
 
@@ -33,27 +30,43 @@ export const OurWorks = () => {
                 {WorksData.map((project) => (
                     <div className='flex flex-col w-full lg:px-12 px-5 space-y-4' key={project.id}>
                         <div className='lg:h-[500px] h-[200px] rounded-xl overflow-hidden'>
-                            <motion.div
-                                style={{
-                                    backgroundImage: `url(${project.img})`,
-                                    backgroundSize: 'cover',
-                                    backgroundPosition: 'center',
-                                    backgroundRepeat: 'no-repeat',
-                                }}
-                                initial={{ scale: 1 }}
-                                whileHover={{ scale: 1.03, transition: { duration: 1 } }}
-                                className='w-full h-full hover:cursor-pointer'
-                            >
-                            </motion.div>
+                            {project.type === "pic" ?
+                                <motion.div
+                                    style={{
+                                        backgroundImage: `url(${project.img})`,
+                                        backgroundSize: 'cover',
+                                        backgroundPosition: 'center',
+                                        backgroundRepeat: 'no-repeat',
+                                    }}
+                                    initial={{ scale: 1 }}
+                                    whileHover={{ scale: 1.2, transition: { duration: 0.1 } }}
+                                    className='w-full h-full hover:cursor-pointer'
+                                >
+                                </motion.div> :
+                                <motion.div className='w-full h-full hover:cursor-pointer flex items-center justify-center'
+                                    initial={{ scale: 1 }}
+                                    whileHover={{ scale: 1.2, transition: { duration: 0.1 } }}
+                                >
+                                    <video
+                                        src={project.vid}
+                                        autoPlay
+                                        loop
+                                        muted
+                                        className='w-full h-auto'
+                                    />
+                                </motion.div>
+                            }
                         </div>
-                        <div className='flex items-center justify-between w-full lg:px-12 px-5'>
-                            <div className='flex flex-col lg:flex-row lg:items-center items-start lg:gap-4'>
+                        <div className='flex flex-wrap items-center justify-between w-full lg:px-12 px-5 gap-2'>
+                            <div className='flex items-center gap-4'>
                                 <h3 className='bg-black'>{project.title}</h3>
                                 <p className='lg:text-base text-xs'>{project.description}</p>
                             </div>
-                            {project.tags.map((tag, index) => (
-                                <span key={index} className='border-[1px] border-white rounded-xl py-1 px-7 uppercase text-xs lg:text-base'>{tag}</span>
-                            ))}
+                            <div className='flex flex-wrap items-center gap-2'>
+                                {project.tags.map((tag, index) => (
+                                    <span key={index} className='border-[1px] border-white rounded-xl py-1 px-7 uppercase text-xs lg:text-base'>{tag}</span>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 ))}
