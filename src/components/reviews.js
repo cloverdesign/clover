@@ -17,7 +17,7 @@ export const Reviews = () => {
     });
 
     return (
-        <motion.section className="flex flex-col gap-8 w-[100dvw] h-[200dvh] origin-top-right items-center text-black py-[100px] bg-green-500 relative"
+        <motion.section className="flex flex-col gap-8 w-[100dvw] lg:h-[200dvh] h-[230dvh] origin-top-right items-center text-black py-[100px] bg-green-500 relative"
             ref={containerRef}
         >
             <div className="space-y-3 text-center">
