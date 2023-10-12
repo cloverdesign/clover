@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { useScroll, useTransform, motion, cubicBezier, stagger } from "framer-motion";
+import heroImg from "../../assets/heroGrid.png";
 
 export const Hero = () => {
     const targetRef = useRef(null);
@@ -52,12 +53,18 @@ export const Hero = () => {
     return (
         <motion.section
             ref={targetRef}
-            style={{ opacity }}
+            style={{
+                opacity,
+                backgroundImage: `url(${heroImg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+            }}
             className="hero p-[40px] w-[100vw] h-[100vh] relative overflow-hidden"
         >
             <motion.div
                 style={{ position }}
-                className="h-full right-0 flex flex-col items-center justify-center space-y-8 w-full z-0"
+                className="h-full right-0 flex flex-col items-center justify-center space-y-8 w-full z-0 "
             >
                 <svg
                     className="absolute my-auto mx-0" width="696" height="624" viewBox="0 0 696 624" fill="none" xmlns="http://www.w3.org/2000/motion.svg">
@@ -73,10 +80,10 @@ export const Hero = () => {
                 >
                     <motion.h1
                         variants={headingVariants}
-                        className='text-center z-0'>crafting timeless designs,</motion.h1>
+                        className='text-center z-0 leading-none'>Crafting timeless designs,</motion.h1>
                     <motion.h1
                         variants={headingVariants}
-                        className='text-center z-0'>one pixel at a time.</motion.h1>
+                        className='text-center z-0 leading-one'>one pixel at a time.</motion.h1>
                 </motion.div>
 
             </motion.div>
