@@ -109,7 +109,7 @@ export const Nav = () => {
         <motion.nav
             initial="closed"
             animate={showMenu ? "opened" : "closed"}
-            className="flex justify-between items-center p-[20px] w-full h-[70px] fixed z-50 bg-black top-0"
+            className="flex justify-between items-center p-[20px] w-full h-[70px] fixed z-50 bg-black top-0 "
         >
 
             <div className={`${showMenu ? "text-black" : "text-white"} z-50 grid lg:grid-cols-3 grid-cols-2 items-center w-full transition duration-[2s] ease-in-out`}>

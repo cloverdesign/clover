@@ -29,7 +29,7 @@ export const OurWorks = () => {
             <div className='w-full z-[2] flex flex-col gap-8' ref={containerRef}>
                 {WorksData.map((project) => (
                     <div className='flex flex-col w-full lg:px-12 px-5 space-y-4' key={project.id}>
-                        <div className='lg:h-[500px] h-[200px] rounded-xl overflow-hidden'>
+                        <div className='lg:h-[500px] h-[200px] lg:rounded-[60px] rounded-[30px] overflow-hidden'>
                             {project.type === "pic" ?
                                 <motion.div
                                     style={{

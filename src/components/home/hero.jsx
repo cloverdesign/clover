@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import { useScroll, useTransform, motion, cubicBezier, stagger } from "framer-motion";
-import heroImg from "../../assets/heroGrid.png";
 
 export const Hero = () => {
     const targetRef = useRef(null);
@@ -55,10 +54,6 @@ export const Hero = () => {
             ref={targetRef}
             style={{
                 opacity,
-                backgroundImage: `url(${heroImg})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat',
             }}
             className="hero p-[40px] w-[100vw] h-[100vh] relative overflow-hidden"
         >
@@ -80,10 +75,10 @@ export const Hero = () => {
                 >
                     <motion.h1
                         variants={headingVariants}
-                        className='text-center z-0 leading-none'>Crafting timeless designs,</motion.h1>
+                        className='text-center z-0 leading-none font-thin'>Crafting timeless designs,</motion.h1>
                     <motion.h1
                         variants={headingVariants}
-                        className='text-center z-0 leading-one'>one pixel at a time.</motion.h1>
+                        className='text-center z-0 leading-one font-thin'>one pixel at a time.</motion.h1>
                 </motion.div>
 
             </motion.div>
