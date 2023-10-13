@@ -13,10 +13,7 @@ export const Who = () => {
                 className="flex flex-col items-center justify-center space-y-8 relative h-full"
             >
                 <h2 className="lg:w-3/5 w-2/3 text-center">A diverse design agency passionate about creating digital experiences.</h2>
-                <div className="flex items-center gap-4">
-                    who we are.
-                    <Links icon={<Icon.HiArrowRight />} variant="primary-black" />
-                </div>
+                <Links icon={<Icon.HiArrowRight />} variant="primary-black" children={'who we are.'} />
             </div>
         </section>
     )

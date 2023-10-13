@@ -71,11 +71,7 @@ export const OurWorks = () => {
                     </div>
                 ))}
             </div>
-
-            <div className="flex items-center gap-4 z-10">
-                View All Projects
-                <Links icon={<Icon.HiArrowRight className='lg:text-base text-[8px]' />} variant="primary-outline" />
-            </div>
+            <Links icon={<Icon.HiArrowRight className='lg:text-base text-[8px]' />} variant="primary-outline" children={"view all projects."} />
         </section>
     )
 }
