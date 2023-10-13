@@ -26,6 +26,7 @@ export default function Magnetic({ children }) {
         magnetic.current.addEventListener("mouseleave", handleMouseLeave)
 
         return () => {
+            if (!magnetic.current) return;
             magnetic.current.removeEventListener("mousemove", handleMouseMove)
             magnetic.current.removeEventListener("mouseleave", handleMouseLeave)
         }
