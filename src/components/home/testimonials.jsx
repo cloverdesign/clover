@@ -28,6 +28,7 @@ export const Testimonials = () => {
                             end: 'bottom center',
                             scrub: true,
                         },
+                        ease: "power1.inOut",
                     },
                 );
             });
