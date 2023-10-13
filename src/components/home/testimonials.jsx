@@ -27,6 +27,7 @@ export const Testimonials = () => {
                             start: 'top center',
                             end: 'bottom center',
                             scrub: true,
+                            snap: 1 / (boxes.length - 1),
                         },
                         ease: "power1.inOut",
                     },
@@ -47,6 +48,7 @@ export const Testimonials = () => {
                         start: 'top center',
                         end: '70% center',
                         scrub: true,
+                        snap: 1,
                     },
                     ease: "power1.inOut",
                 },
@@ -58,7 +60,7 @@ export const Testimonials = () => {
 
     return (
         <section className="flex flex-col items-center lg:justify-center h-fit py-10" ref={container}>
-            <div className="space-y-3 px-6 lg:w-[50%] text-center header h-screen flex flex-col justify-center">
+            <div className="space-y-3 px-6 lg:w-[50%] text-center header h-[60vh] flex flex-col justify-center">
                 <h2 className="text-5xl lg:text-7xl">The Talk of <br /> the Town!</h2>
                 <p className="text-xl font-thin">Hear what our clients say about us.</p>
             </div>
@@ -78,11 +80,11 @@ export const Testimonials = () => {
 export const TestimonialCard = ({ title, company, text }) => {
 
     return (
-        <div className="card top-[90px] flex flex-col gap-1 justify-center w-fit h-[300px] lg:px-20 px-6 py-8 max-w-[600px] min-w-[250px] 
+        <div className="card top-[200px] flex flex-col gap-1 justify-center w-fit h-[300px] lg:px-20 px-6 py-8 max-w-[600px] mx-8
                         review-card bg-green-500 text-black rounded-xl rotate-2"
         >
             <p className="font-bold">{title} - <span className="font-bold">{company}</span></p>
-            <p className="text-sm">"{text}"</p>
+            <p className="text-xs md:text-sm">"{text}"</p>
         </div>
     )
 }

@@ -28,7 +28,6 @@ export const Meet = () => {
                         start: '-50% center',
                         end: '30% center',
                         scrub: true,
-                        markers: true,
                     },
                     ease: "power1.inOut",
                     duration: 4,
@@ -59,7 +58,7 @@ export const Meet = () => {
     }, []);
 
     return (
-        <section className='lg:px-12 px-5 rounded lg:leading-[80px] flex flex-col lg:flex-row items-center lg:gap-2 gap-8 pt-[100px]' ref={container}>
+        <section className='lg:px-12 px-5 rounded lg:leading-[80px] flex flex-col lg:flex-row items-center lg:gap-2 gap-8 pt-[100px] overflow-hidden' ref={container}>
             <div className='header space-y-4 lg:w-[50%]'>
                 <h1 className='leading-none'>* who stands behind your <span className='italic text-green-500'>amazing</span> designs?</h1>
                 <span className="flex items-center gap-4">
