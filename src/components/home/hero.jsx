@@ -92,6 +92,7 @@ import { Link } from "react-router-dom";
 export const Hero = () => {
 
     const container = useRef(null);
+    const main = useRef(null);
     const text = useRef(null);
     const circle = useRef(null);
 
@@ -139,11 +140,28 @@ export const Hero = () => {
             container.current.addEventListener("mousemove", handleMouseMove)
             container.current.addEventListener("mouseleave", handleMouseLeave)
 
+            let reel = self.selector('.reel')
+            gsap.fromTo(reel,
+                {
+                    scale: 0.7,
+                },
+                {
+                    scale: 1,
+                    scrollTrigger: {
+                        trigger: reel,
+                        start: '-70% center',
+                        end: 'bottom center',
+                        scrub: true,
+                    },
+                    ease: "ease.inOut"
+                }
+            )
+
             return () => {
                 container.current.removeEventListener("mousemove", handleMouseMove)
                 container.current.removeEventListener("mouseleave", handleMouseLeave)
             }
-        }, container);
+        }, main);
 
         return () => ctx.revert();
     }, [])
@@ -156,6 +174,7 @@ export const Hero = () => {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
             }}
+            ref={main}
         >
             <div className="flex items-end" ref={container}>
                 <Link to="/about" className="font-display text-[23vw] font-bold leading-none hover:[filter]">
@@ -169,7 +188,7 @@ export const Hero = () => {
             <p className="font-thin text-2xl">crafting timeless designs, one pixel at a time</p>
 
             <div
-                className="h-[100vh] w-full text-black bg-green-500 lg:rounded-[100px] rounded-[30px] mt-10"
+                className="reel h-[70vh] w-full text-black bg-green-500 lg:rounded-[100px] rounded-[30px] mt-10"
             >
                 <h1 className="m-auto text-center">*reel</h1>
             </div>
