@@ -8,6 +8,8 @@ import { Contact } from './routes/contact.jsx'
 import { Work } from './routes/work.jsx'
 import './index.css'
 import { Home } from './routes/home.jsx'
+import { Blog } from './routes/blog.jsx'
+import { BlogPost } from './components/blog/blogpost.jsx'
 
 const router = createBrowserRouter([
   {
@@ -34,10 +36,19 @@ const router = createBrowserRouter([
           }
         ]
       },
-
       {
         path: '/contact',
         element: <Contact />
+      },
+      {
+        path: '/blog',
+        element: <Blog />,
+        children: [
+          {
+            path: ':id',
+            element: <BlogPost />
+          }
+        ]
       }
     ]
   }
