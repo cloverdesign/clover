@@ -23,7 +23,7 @@ export const Who = () => {
                     ease: "ease.out",
                     scrollTrigger: {
                         trigger: main.current,
-                        start: "30% center",
+                        start: "10% center",
                         end: "50% center",
                         scrub: 1,
                     }
@@ -35,7 +35,7 @@ export const Who = () => {
 
     return (
         <section
-            className="h-[150vh] text-black bg-green-500 flex flex-col items-center justify-center gap-8"
+            className="h-[100vh] text-black bg-green-500 flex flex-col items-center justify-center gap-8"
             ref={main}
         >
             <h1 className="leading-none text-center">A diverse design agency passionate about creating digital experiences.</h1>
