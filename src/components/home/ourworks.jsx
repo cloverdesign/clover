@@ -26,7 +26,7 @@ export const OurWorks = () => {
 
             <motion.div className='bg-black h-full w-full' />
 
-            <div className='w-full z-[2] flex flex-col gap-8' ref={containerRef}>
+            <div className='w-full z-[2] flex flex-col gap-10' ref={containerRef}>
                 {WorksData.map((project) => (
                     <div className='flex flex-col w-full lg:px-12 px-5 space-y-4' key={project.id}>
                         <div className='lg:h-[500px] h-[200px] lg:rounded-[60px] rounded-[30px] overflow-hidden'>
@@ -64,7 +64,7 @@ export const OurWorks = () => {
                             </div>
                             <div className='flex flex-wrap items-center gap-2'>
                                 {project.tags.map((tag, index) => (
-                                    <span key={index} className='border-[1px] border-white rounded-xl py-1 px-7 uppercase text-xs lg:text-base'>{tag}</span>
+                                    <span key={index} className='border-[1px] border-white rounded-lg py-1 px-7 uppercase text-[8px] lg:text-xs'>{tag}</span>
                                 ))}
                             </div>
                         </div>
