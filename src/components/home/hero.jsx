@@ -3,6 +3,7 @@ import { useScroll, useTransform, motion, cubicBezier, stagger } from "framer-mo
 import grid from '../../assets/grid.png'
 import gsap from "gsap";
 import { Link } from "react-router-dom";
+import video from '../../assets/avant/avant.mp4'
 
 // export const Hero = () => {
 //     const targetRef = useRef(null);
@@ -143,7 +144,7 @@ export const Hero = () => {
             let reel = self.selector('.reel')
             gsap.fromTo(reel,
                 {
-                    scale: 0.7,
+                    scale: 0.75,
                 },
                 {
                     scale: 1,
@@ -158,6 +159,7 @@ export const Hero = () => {
             )
 
             return () => {
+                if (!container.current) return;
                 container.current.removeEventListener("mousemove", handleMouseMove)
                 container.current.removeEventListener("mouseleave", handleMouseLeave)
             }
@@ -176,21 +178,24 @@ export const Hero = () => {
             }}
             ref={main}
         >
-            <div className="flex items-end" ref={container}>
-                <Link to="/about" className="font-display text-[23vw] font-bold leading-none hover:[filter]">
-                    clover
-                </Link>
-                <span className="circle h-[40px] w-[40px] bg-green-500 rounded-full hidden md:flex items-center justify-center pointer-events-none" ref={circle}>
-                    <span className="font-body uppercase text-[2px] leading-none text-black" ref={text}>Let's <br /> Talk</span>
-                </span>
+            <div className="flex flex-col items-center">
+                <div className="flex items-end" ref={container}>
+                    <Link to="/about" className="font-display text-[23vw] font-bold leading-none hover:[filter]">
+                        clover
+                    </Link>
+                    <span className="circle h-[40px] w-[40px] bg-green-500 rounded-full hidden md:flex items-center justify-center pointer-events-none" ref={circle}>
+                        <span className="font-body uppercase text-[2px] leading-none text-black" ref={text}>Let's <br /> Talk</span>
+                    </span>
+                </div>
+                <p className="font-thin lg:text-2xl text-sm lg:w-5/5 w-3/5 text-center">crafting timeless designs, one pixel at a time</p>
             </div>
 
-            <p className="font-thin text-2xl">crafting timeless designs, one pixel at a time</p>
-
             <div
-                className="reel h-[70vh] w-full text-black bg-green-500 lg:rounded-[100px] rounded-[30px] mt-10"
+                className="reel h-[70vh] w-full lg:rounded-[100px] rounded-[30px] md:mt-10 overflow-hidden"
             >
-                <h1 className="m-auto text-center">*reel</h1>
+                <video className="h-full w-full object-cover" loop muted>
+                    <source src={video} />
+                </video>
             </div>
         </section>
     )
