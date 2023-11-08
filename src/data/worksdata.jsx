@@ -1,8 +1,6 @@
 import helggImg from '../assets/helgg.jpg'
-import pluginImg from '../assets/plugin/pluginBag.png'
+import staxImg from '../assets/stax/phone.png'
 import avantVid from '../assets/avant/avant.mp4'
-
-console.log(helggImg)
 
 export const WorksData = [
     {
@@ -15,10 +13,10 @@ export const WorksData = [
     },
     {
         id: 2,
-        title: "Plugin",
-        description: '"one-stop shop"',
+        title: "Stax",
+        description: '"Come. Learn, Grow."',
         tags: ["Branding", "Logo Design", "Motion language"],
-        img: pluginImg,
+        img: staxImg,
         type: "pic"
     },
     {
