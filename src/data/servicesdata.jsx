@@ -3,17 +3,17 @@ export const ServicesData = [
     {
         id: 1,
         title: "Graphic Design",
-        description: "Our graphic design service is where pixels meet purpose. We craft visuals that do the talking for you, turning ideas into polished, professional designs."
+        description: "Where pixels meet purpose. We craft visuals that do the talking for you, turning ideas into polished, professional designs."
     },
     {
         id: 2,
         title: "Motion Design",
-        description: "Lights, camera, animation! With motion design, we infuse life into your brand. Our motion graphics add that touch of sophistication to make your content stand out."
+        description: "Lights, camera, animation! With motion design, we infuse life into your brand."
     },
     {
         id: 3,
         title: "Branding",
-        description: "We sculpt your brand's unique identity. From logos to fonts and color schemes, we craft a memorable presence that speaks to your audience, fostering brand loyalty and leaving a lasting impression. Your brand, our expertise."
+        description: "We sculpt your brand's unique identity. Crafting a memorable presence that speaks to your audience, fostering brand loyalty and leaving a lasting impression. Your brand, our expertise."
     },
     {
         id: 4,
@@ -23,6 +23,6 @@ export const ServicesData = [
     {
         id: 5,
         title: "Event Theming",
-        description: "We transform events into unforgettable experiences. Our creative touch sets the stage, crafting themes and decor that elevate your gatherings and leave a lasting impression."
+        description: "Unforgettable experiences. Our creative touch sets the stage, crafting themes and decor that elevate your gatherings and leave a lasting impression."
     }
 ]

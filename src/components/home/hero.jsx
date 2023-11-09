@@ -142,7 +142,7 @@ export const Hero = () => {
             </div>
 
             <div
-                className="reel lg:h-[80vh] h-fit w-full lg:rounded-[100px] rounded-[30px] mt-4 md:mt-10 overflow-hidden relative"
+                className="reel lg:h-[80vh] h-fit w-full lg:rounded-[100px] rounded-[30px] mt-4 md:mt-10 overflow-hidden relative border-y-[1px] border-y-grey"
             >
                 <video className="h-full w-full object-cover" autoPlay loop muted>
                     <source src={video} />
