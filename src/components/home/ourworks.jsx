@@ -39,13 +39,14 @@ export const OurWorks = () => {
                                         backgroundRepeat: 'no-repeat',
                                     }}
                                     initial={{ scale: 1 }}
-                                    whileHover={{ scale: 1.2, transition: { duration: 0.1 } }}
-                                    className='w-full h-full hover:cursor-pointer'
+                                    whileHover={{ scale: 1.02, transition: { duration: 0.1, bounce: 1 } }}
+                                    className='w-full h-full hover:cursor-pointer group overflow-hidden'
                                 >
+                                    <span className='group-hover:opacity-100 opacity-0 text-5xl flex items-center justify-center bg-black backdrop-blur-sm bg-opacity-10 h-full w-full'>help</span>
                                 </motion.div> :
                                 <motion.div className='w-full h-full hover:cursor-pointer flex items-center justify-center'
                                     initial={{ scale: 1 }}
-                                    whileHover={{ scale: 1.2, transition: { duration: 0.1 } }}
+                                    whileHover={{ scale: 1.02, transition: { duration: 0.1 } }}
                                 >
                                     <video
                                         src={project.vid}
