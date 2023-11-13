@@ -42,9 +42,11 @@ export const OurWorks = () => {
                                     whileHover={{ scale: 1.02, transition: { duration: 0.1, bounce: 1 } }}
                                     className='w-full h-full hover:cursor-pointer group overflow-hidden'
                                 >
-                                    <span className='group-hover:opacity-100 opacity-0 text-5xl flex items-center justify-center bg-black backdrop-blur-sm bg-opacity-10 h-full w-full'>help</span>
+                                    <span className='group-hover:opacity-100 opacity-0 transition duration-500 ease-in-out text-2xl flex items-center justify-center bg-black backdrop-blur-sm bg-opacity-40 h-full w-full font-display'>
+                                        <p className='text-white'>More about {project.title}</p>
+                                    </span>
                                 </motion.div> :
-                                <motion.div className='w-full h-full hover:cursor-pointer flex items-center justify-center'
+                                <motion.div className='w-full h-full hover:cursor-pointer flex items-center justify-center relative group overflow-hidden'
                                     initial={{ scale: 1 }}
                                     whileHover={{ scale: 1.02, transition: { duration: 0.1 } }}
                                 >
@@ -55,6 +57,9 @@ export const OurWorks = () => {
                                         muted
                                         className='w-full h-auto'
                                     />
+                                    <span className='group-hover:opacity-100 absolute top-0 left-0 opacity-0 transition duration-500 ease-in-out text-2xl flex items-center justify-center bg-black backdrop-blur-sm bg-opacity-40 h-full w-full font-display'>
+                                        <p className='text-white'>More about {project.title}</p>
+                                    </span>
                                 </motion.div>
                             }
                         </div>
