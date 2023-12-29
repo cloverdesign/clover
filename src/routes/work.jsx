@@ -21,14 +21,16 @@ export const Work = () => {
                         autoPlay
                         loop
                         muted
+                        className="h-full w-full object-cover"
                     /> : <img
                         lazy="true"
                         src={picture}
                         alt={work.title}
+                        className="h-full w-full object-cover"
                     />;
 
                 return (
-                    <li key={index} className="py-4">
+                    <li key={index} className="rounded-lg overflow-hidden">
                         {item}
                     </li>
                 );
@@ -64,7 +66,7 @@ export const Work = () => {
                 </div>
                 <p className="lg:text-2xl font-thin text-grey">{currentProject.description}</p>
             </div>
-            <ul>
+            <ul className="grid grid-cols-2 gap-3">
                 {pictures}
             </ul>
             <div className="p-2 bg-black sticky bottom-0 text-white flex justify-between items-center">
