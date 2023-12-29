@@ -29,7 +29,7 @@ export const Footer = () => {
         {
             id: 2,
             path: "/works",
-            name: "our works",
+            name: "our work",
         },
         {
             id: 3,

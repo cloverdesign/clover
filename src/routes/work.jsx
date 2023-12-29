@@ -70,7 +70,7 @@ export const Work = () => {
             </ul>
             <div className="p-2 bg-black sticky bottom-0 text-white grid grid-cols-3 justify-center items-center">
                 <Magnetic>
-                    <Link className="flex gap-2 items-center" to={'/works'}><HeroIcons.HiArrowLeft /> our works</Link>
+                    <Link className="flex gap-2 items-center" to={'/works'}><HeroIcons.HiArrowLeft /> our work</Link>
                 </Magnetic>
                 <h3 className="place-self-center text-base">{currentProject.title}</h3>
                 {nextProject ? <Magnetic>

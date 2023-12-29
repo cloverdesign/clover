@@ -6,7 +6,7 @@ export const Works = () => {
 
     let allWorks = <div className="p-10 lg:p-20">
         <ul className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center">
-            <h1 className="text-6xl md:text-7xl lg:text-9xl leading-none">Our <br /> Works</h1>
+            <h1 className="text-6xl md:text-7xl lg:text-9xl leading-none">Our <br /> Work.</h1>
             {
                 works.map((work, index) => (
                     <li key={index} className="space-y-3">

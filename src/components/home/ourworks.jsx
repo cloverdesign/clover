@@ -21,7 +21,7 @@ export const OurWorks = () => {
                 style={{ y }}
                 ref={targetRef}
             >
-                Our Works.
+                Our Work.
             </motion.h2>
 
             <motion.div className='bg-black h-full w-full' />
