@@ -3,6 +3,7 @@ import { Layout } from "./components/layouts/layout"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
 import Lenis from "@studio-freight/lenis"
+import ScrollToTop from "./utils/scrollToTop"
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <>
+      <ScrollToTop />
       <Layout>
         <Outlet />
       </Layout>

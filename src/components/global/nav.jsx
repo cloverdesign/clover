@@ -91,7 +91,7 @@ export const Nav = () => {
         {
             id: 2,
             path: "/works",
-            name: "our work",
+            name: "our works",
         },
         {
             id: 3,

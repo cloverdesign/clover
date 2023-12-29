@@ -28,8 +28,8 @@ export const Footer = () => {
         },
         {
             id: 2,
-            path: "/work",
-            name: "work",
+            path: "/works",
+            name: "our works",
         },
         {
             id: 3,

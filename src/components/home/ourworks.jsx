@@ -77,7 +77,7 @@ export const OurWorks = () => {
                     </div>
                 ))}
             </div>
-            <Links icon={<Icon.HiArrowRight className='lg:text-base text-[8px]' />} variant="primary-outline" children={"view all projects."} />
+            <Links url="/works" icon={<Icon.HiArrowRight className='lg:text-base text-[8px]' />} variant="primary-outline" children={"view all projects."} to />
         </section>
     )
 }

@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
 
 :root {
     --font-unbounded: 'Unbounded', sans-serif;
     --font-lexend: 'Lexend', sans-serif;
+}
+
+::selection {
+    background: rgba(44, 254, 2, 0.361)
 }
 
 
