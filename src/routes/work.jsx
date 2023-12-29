@@ -28,7 +28,7 @@ export const Work = () => {
                     />;
 
                 return (
-                    <li key={index}>
+                    <li key={index} className="py-4">
                         {item}
                     </li>
                 );
@@ -67,7 +67,7 @@ export const Work = () => {
             <ul>
                 {pictures}
             </ul>
-            <div className="p-2 bg-black sticky bottom-0 space-y-10 text-white flex justify-between items-center">
+            <div className="p-2 bg-black sticky bottom-0 text-white flex justify-between items-center">
                 <Magnetic>
                     <Link className="flex gap-2 items-center" to={'/works'}><HeroIcons.HiArrowLeft /> our works</Link>
                 </Magnetic>

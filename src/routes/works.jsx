@@ -39,13 +39,6 @@ export const Works = () => {
                                     </Link>
                                 </div>
                         }
-                        {/* <h3 className="text-white">{work.title}</h3>
-                        <div className="flex items-center gap-4">
-                            {
-                                work.categories.map((category, index) => (
-                                    <span className="font-thin border-[1px] border-grey text-grey rounded-lg py-1 px-7 uppercase text-[8px] lg:text-xs" key={index}>{category}</span>))
-                            }
-                        </div> */}
                     </li>
                 ))
             }
