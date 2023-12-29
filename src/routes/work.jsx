@@ -44,13 +44,12 @@ export const Work = () => {
 
     return (
         <section className="w-[100vw] pt-[50px] lg:pt-0 space-y-8 relative">
-            <div className="w-full"
+            <div className="w-full h-[200px] lg:h-[400px]"
                 style={{
                     backgroundImage: `url(${currentProject.header})`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
-                    height: '400px'
                 }}
             >
             </div>
@@ -66,16 +65,16 @@ export const Work = () => {
                 </div>
                 <p className="lg:text-2xl font-thin text-grey">{currentProject.description}</p>
             </div>
-            <ul className="grid grid-cols-2 gap-3">
+            <ul className="grid grid-cols-1 px-3 lg:px-0 lg:grid-cols-2 gap-3">
                 {pictures}
             </ul>
-            <div className="p-2 bg-black sticky bottom-0 text-white flex justify-between items-center">
+            <div className="p-2 bg-black sticky bottom-0 text-white grid grid-cols-3 justify-center items-center">
                 <Magnetic>
                     <Link className="flex gap-2 items-center" to={'/works'}><HeroIcons.HiArrowLeft /> our works</Link>
                 </Magnetic>
-                <h3>{currentProject.title}</h3>
+                <h3 className="place-self-center text-base">{currentProject.title}</h3>
                 {nextProject ? <Magnetic>
-                    <Link className="flex gap-2 items-center" to={'/works/' + nextProject.workTitle}>next project <HeroIcons.HiArrowRight /> </Link>
+                    <Link className="flex gap-2 items-center justify-self-end" to={'/works/' + nextProject.workTitle}>{nextProject.workTitle} <HeroIcons.HiArrowRight /> </Link>
                 </Magnetic> : null}
             </div>
         </section>

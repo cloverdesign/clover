@@ -66,9 +66,9 @@ export const WorkData = [
         title: 'Stax',
         categories: ['Branding'],
         description: "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
-        pictures: ['/assets/helgg/2.png', '/assets/helgg/3.png', '/assets/helgg/4.mp4', '/assets/helgg/5.png', '/assets/helgg/6.png', '/assets/helgg/7.png', '/assets/helgg/8.png'],
-        header: '/assets/helgg/hg1.webp',
-        display: '/assets/helgg/hg1.webp'
+        pictures: ['/assets/stax/st2.gif', '/assets/stax/st3.webp', '/assets/stax/st4.webp', '/assets/stax/st5.webp', '/assets/stax/st6.webp', '/assets/stax/st7.webp', '/assets/stax/st8.webp', '/assets/stax/st9.webp', '/assets/stax/st10.webp'],
+        header: '/assets/stax/st1.webp',
+        display: '/assets/stax/st1.webp'
     },
     {
         id: 4,
@@ -76,7 +76,7 @@ export const WorkData = [
         title: 'Pennywise',
         categories: ['Branding'],
         description: "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
-        pictures: ['/assets/helgg/2.png', '/assets/helgg/3.png', '/assets/helgg/4.mp4', '/assets/helgg/5.png', '/assets/helgg/6.png', '/assets/helgg/7.png', '/assets/helgg/8.png'],
+        pictures: ['/assets/helgg/2.webp', '/assets/helgg/3.png', '/assets/helgg/4.mp4', '/assets/helgg/5.png', '/assets/helgg/6.png', '/assets/helgg/7.png', '/assets/helgg/8.png'],
         header: '/assets/helgg/1.png',
         display: '/assets/plugin/pl5.webp'
     }
