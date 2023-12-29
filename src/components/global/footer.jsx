@@ -1,6 +1,6 @@
 import * as Icon from "react-icons/pi"
 import * as HeroIcons from "react-icons/hi"
-import image from '../../assets/full.svg'
+import image from '../../assets/home/full.svg'
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
