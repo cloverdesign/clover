@@ -61,7 +61,7 @@ export const Meet = () => {
         <section className='lg:px-12 px-5 rounded lg:leading-[80px] flex flex-col lg:flex-row items-center lg:gap-2 gap-8 pt-[100px] overflow-hidden' ref={container}>
             <div className='header space-y-4 lg:w-[50%]'>
                 <h1 className='leading-none'>* who stands behind your <span className='italic text-green-500'>amazing</span> designs?</h1>
-                <Links url="/about/the-team" icon={<Icon.HiArrowRight className='lg:text-base text-[8px]' />} variant="primary-outline" children={"meet the team."} />
+                <Links url="/about#the-team" icon={<Icon.HiArrowRight className='lg:text-base text-[8px]' />} variant="primary-outline" children={"meet the team."} />
             </div>
             <div
                 style={{

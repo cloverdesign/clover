@@ -56,7 +56,7 @@ export const About = () => {
                 </div>
             </section>
 
-            <section className="flex flex-wrap gap-10 text-center">
+            <section className="flex flex-wrap gap-10 text-center" id="the-team">
                 <div>
                     <Picture img={primehover ? prime2 : prime1} mouseEnter={() => setPrimeHover(true)} mouseLeave={() => setPrimeHover(false)} classNames="mb-4" />
                     <h4 className="font-display">Oluwabamise Ojuko</h4>
