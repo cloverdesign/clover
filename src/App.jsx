@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, ScrollRestoration } from "react-router-dom"
 import { Layout } from "./components/layouts/layout"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <>
-      <ScrollToTop />
+      <ScrollRestoration />
       <Layout>
         <Outlet />
       </Layout>
