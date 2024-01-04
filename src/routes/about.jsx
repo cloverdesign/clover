@@ -1,16 +1,7 @@
 import { Link } from "react-router-dom"
-import { PictureHeader } from "../components/about/pictureheader"
+// import { PictureHeader } from "../components/about/pictureheader"
 import { ServicesData as services } from "../data/servicesdata"
-import prime1 from '../assets/about/prime1.png'
-import prime2 from '../assets/about/prime2.png'
-import johan1 from '../assets/about/johan1.png'
-import johan2 from '../assets/about/johan2.png'
-import subi1 from '../assets/about/subi1.png'
-import subi2 from '../assets/about/subi2.png'
-import tan1 from '../assets/about/tan1.png'
-import tan2 from '../assets/about/tan2.png'
-import kayin1 from '../assets/about/kayin1.png'
-import kayin2 from '../assets/about/kayin2.png'
+import { TeamData as team } from "../data/teamData"
 import { useState } from "react"
 
 export const About = () => {
@@ -21,18 +12,18 @@ export const About = () => {
     const [kayinhover, setKayinHover] = useState(false)
 
     return (
-        <div className="pt-[150px] lg:px-10 p-2">
+        <div className="pt-[150px] px-10">
             {/* Might not add this, need to fix the jitter on the marquee */}
             {/* <PictureHeader /> */}
 
             <section className="relative w-fit group">
-                <a href="#who" className="bg-green-500 group-hover:rotate-[8deg] transition duration-500 ease-in-out text-black p-2 rounded-lg absolute -rotate-[8deg] -top-6">who are we?</a>
+                <a href="#who" className="bg-green-500 group-hover:rotate-[8deg] transition duration-500 ease-in-out text-black p-2 rounded-lg absolute -rotate-[8deg] -top-6 text-xs lg:text-base">who are we?</a>
                 <h1 className="leading-none">Elevating African <br /> brands worldwide.</h1>
             </section>
 
-            <section className="font-thin flex border-[0.8px] border-grey rounded-xl p-10">
-                <h2 className="w-1/3">Who?</h2>
-                <div className="w-2/3 border-l-[0.8px] px-10 border-grey">
+            <section className="font-thin flex flex-col lg:flex-row border-[0.8px] border-grey rounded-xl p-10 gap-10">
+                <h2 className="lg:w-1/3">Who?</h2>
+                <div className="lg:w-2/3 border-t-[0.8px] lg:border-l-[0.8px] lg:border-t-0 py-10 lg:px-10 border-grey">
                     <p className="mb-10">
                         Innovation, Creativity, Talent, and a plethora of other distinctive qualities you find flowing through the veins of the typical African entrepreneur. The unmatched zeal and passion with which business is done in Africa results in brands that deserve to be carried beyond the shores of the four bounding seas. Brands that deserve to spread their wings and court unceasing disaster for their competitors on the global stage.
                     </p>
@@ -43,11 +34,11 @@ export const About = () => {
                 </div>
             </section>
 
-            <section className="font-thin flex border-[0.8px] border-grey rounded-xl p-10">
-                <h2 className="w-1/3">Services</h2>
-                <div className="w-2/3 border-l-[0.8px] px-10 border-grey grid grid-cols-2 gap-10">
+            <section className="font-thin flex flex-col lg:flex-row border-[0.8px] border-grey rounded-xl p-10 gap-10">
+                <h2 className="lg:w-1/3">Services</h2>
+                <div className="lg:w-2/3 border-t-[0.8px] lg:border-l-[0.8px] lg:border-t-0 py-10 lg:px-10 border-grey grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {services.map((service) => (
-                        <div id={service.id}>
+                        <div key={service.id} className="space-y-2">
                             <h3>{service.title}</h3>
                             <p>{service.description}</p>
                             <Link to="/contact" className="underline hover:text-green-500 text-sm pt-10">Get Started</Link>
@@ -56,44 +47,23 @@ export const About = () => {
                 </div>
             </section>
 
-            <section className="flex flex-wrap gap-10 text-center" id="the-team">
-                <div>
-                    <Picture img={primehover ? prime2 : prime1} mouseEnter={() => setPrimeHover(true)} mouseLeave={() => setPrimeHover(false)} classNames="mb-4" />
-                    <h4 className="font-display">Oluwabamise Ojuko</h4>
-                    <p className="font-thin text-sm text-grey">Founder, Graphics Designer</p>
-                </div>
-                <div>
-                    <Picture img={johanhover ? johan2 : johan1} mouseEnter={() => setJohanHover(true)} mouseLeave={() => setJohanHover(false)} classNames="mb-4" />
-                    <h4 className="font-display">Johaan Martins</h4>
-                    <p className="font-thin text-sm text-grey">Digital Illustrator</p>
-                </div>
-                <div>
-                    <Picture img={subihover ? subi2 : subi1} mouseEnter={() => setSubiHover(true)} mouseLeave={() => setSubiHover(false)} classNames="mb-4" />
-                    <h4 className="font-display">Oluwabusolami Onigbinde</h4>
-                    <p className="font-thin text-sm text-grey">Social Media Manager</p>
-                </div>
-                <div>
-                    <Picture img={tanhover ? tan2 : tan1} mouseEnter={() => setTanHover(true)} mouseLeave={() => setTanHover(false)} classNames="mb-4" />
-                    <h4 className="font-display">Tanyalouise Ekekwe</h4>
-                    <p className="font-thin text-sm text-grey">Visual Designer</p>
-                </div>
-                <div>
-                    <Picture img={kayinhover ? kayin2 : kayin1} mouseEnter={() => setKayinHover(true)} mouseLeave={() => setKayinHover(false)} classNames="mb-4" />
-                    <h4 className="font-display">Kanyinsola Owolabi</h4>
-                    <p className="font-thin text-sm text-grey">Head of Strategy</p>
-                </div>
-                <div>
-
-                </div>
+            <section className="flex flex-wrap justify-center gap-10 text-center" id="the-team">
+                {
+                    team.map((member) => (
+                        <div id={member.id}>
+                            <Picture img={member.first_pic} hoverImg={member.second_pic} />
+                            <h4 className="font-display">{member.name}</h4>
+                            <p className="font-thin text-sm text-grey">{member.role}</p>
+                        </div>
+                    ))
+                }
             </section>
         </div >
     )
 }
 
-const Picture = ({ img, classNames, mouseEnter, mouseLeave }) => {
+const Picture = ({ img, hoverImg, classNames, mouseEnter, mouseLeave }) => {
     return (
-        <div className={`w-[300px] h-fit rounded-xl overflow-hidden ${classNames}`} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
-            <img src={img} alt="" className="w-[120%]" />
-        </div>
+        <div className={`w-[300px] h-[300px] bg-[url('../public${img}')] hover:bg-[url('../public${hoverImg}')] bg-cover rounded-xl ${classNames}`} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}></div>
     )
 }

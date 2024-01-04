@@ -3,7 +3,7 @@ import { Layout } from "./components/layouts/layout"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/all"
 import Lenis from "@studio-freight/lenis"
-import ScrollToTop from "./utils/scrollToTop"
+import ScrollToTop from "./components/global/scrollToTop"
 
 function App() {
 
@@ -19,12 +19,13 @@ function App() {
   gsap.ticker.lagSmoothing(0)
 
   return (
-    <>
+    <div className="relative">
       <ScrollRestoration />
+      <ScrollToTop />
       <Layout>
         <Outlet />
       </Layout>
-    </>
+    </div>
   )
 }
 
