@@ -3,6 +3,7 @@ import { WorksData } from '../../data/worksdata'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Links } from '../global/links'
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 export const OurWorks = () => {
     const targetRef = useRef(null);
@@ -31,36 +32,40 @@ export const OurWorks = () => {
                     <div className='flex flex-col w-full lg:px-12 px-5 space-y-4' key={project.id}>
                         <div className='lg:h-[500px] h-[200px] lg:rounded-[60px] rounded-[30px] overflow-hidden'>
                             {project.type === "pic" ?
-                                <motion.div
-                                    style={{
-                                        backgroundImage: `url(${project.img})`,
-                                        backgroundSize: 'cover',
-                                        backgroundPosition: 'center',
-                                        backgroundRepeat: 'no-repeat',
-                                    }}
-                                    initial={{ scale: 1 }}
-                                    whileHover={{ scale: 1.02, transition: { duration: 0.1, bounce: 1 } }}
-                                    className='w-full h-full hover:cursor-pointer group overflow-hidden'
-                                >
-                                    <span className='group-hover:opacity-100 opacity-0 transition duration-500 ease-in-out text-2xl flex items-center justify-center bg-black backdrop-blur-sm bg-opacity-40 h-full w-full font-display'>
-                                        <p className='text-white'>More about {project.title}</p>
-                                    </span>
-                                </motion.div> :
-                                <motion.div className='w-full h-full hover:cursor-pointer flex items-center justify-center relative group overflow-hidden'
-                                    initial={{ scale: 1 }}
-                                    whileHover={{ scale: 1.02, transition: { duration: 0.1 } }}
-                                >
-                                    <video
-                                        src={project.vid}
-                                        autoPlay
-                                        loop
-                                        muted
-                                        className='w-full h-auto'
-                                    />
-                                    <span className='group-hover:opacity-100 absolute top-0 left-0 opacity-0 transition duration-500 ease-in-out text-2xl flex items-center justify-center bg-black backdrop-blur-sm bg-opacity-40 h-full w-full font-display'>
-                                        <p className='text-white'>More about {project.title}</p>
-                                    </span>
-                                </motion.div>
+                                <Link to={project.url}>
+                                    <motion.div
+                                        style={{
+                                            backgroundImage: `url(${project.img})`,
+                                            backgroundSize: 'cover',
+                                            backgroundPosition: 'center',
+                                            backgroundRepeat: 'no-repeat',
+                                        }}
+                                        initial={{ scale: 1 }}
+                                        whileHover={{ scale: 1.02, transition: { duration: 0.1, bounce: 1 } }}
+                                        className='w-full h-full hover:cursor-pointer group overflow-hidden'
+                                    >
+                                        <span className='group-hover:opacity-100 opacity-0 transition duration-500 ease-in-out text-2xl flex items-center justify-center bg-black backdrop-blur-sm bg-opacity-40 h-full w-full font-display'>
+                                            <p className='text-white'>More about {project.title}</p>
+                                        </span>
+                                    </motion.div>
+                                </Link> :
+                                <Link to={project.url}>
+                                    <motion.div className='w-full h-full hover:cursor-pointer flex items-center justify-center relative group overflow-hidden'
+                                        initial={{ scale: 1 }}
+                                        whileHover={{ scale: 1.02, transition: { duration: 0.1 } }}
+                                    >
+                                        <video
+                                            src={project.vid}
+                                            autoPlay
+                                            loop
+                                            muted
+                                            className='w-full h-auto'
+                                        />
+                                        <span className='group-hover:opacity-100 absolute top-0 left-0 opacity-0 transition duration-500 ease-in-out text-2xl flex items-center justify-center bg-black backdrop-blur-sm bg-opacity-40 h-full w-full font-display'>
+                                            <p className='text-white'>More about {project.title}</p>
+                                        </span>
+                                    </motion.div>
+                                </Link>
                             }
                         </div>
                         <div className='flex flex-wrap items-center justify-between w-full lg:px-12 px-5 gap-2'>

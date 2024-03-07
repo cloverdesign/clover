@@ -9,7 +9,8 @@ export const WorksData = [
         description: "Helgg Scooters LTD",
         tags: ["Branding"],
         img: helggImg,
-        type: "pic"
+        type: "pic",
+        url: "/works/helgg"
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ export const WorksData = [
         description: '"Come. Learn, Grow."',
         tags: ["Branding", "Logo Design", "Motion language"],
         img: staxImg,
-        type: "pic"
+        type: "pic",
+        url: "/works/stax"
     },
     {
         id: 3,
@@ -25,7 +27,8 @@ export const WorksData = [
         description: "Foundation",
         tags: ["Branding", "Logo Design"],
         vid: avantVid,
-        type: "vid"
+        type: "vid",
+        url: "/works/avant"
     }
 ]
 
