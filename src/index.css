@@ -1,18 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-    --font-unbounded: 'Unbounded', sans-serif;
-    --font-lexend: 'Lexend', sans-serif;
+    --font-unbounded: "Unbounded", sans-serif;
+    --font-lexend: "Lexend", sans-serif;
 }
 
 ::selection {
-    background: rgba(44, 254, 2, 0.361)
+    background: rgba(44, 254, 2, 0.361);
 }
-
 
 * {
     margin: 0;
@@ -53,7 +52,8 @@ h3 {
 }
 
 a:hover {
-    filter: drop-shadow(0 20px 13px rgba(151, 255, 128, 0.09)) drop-shadow(0 8px 5px rgb(151, 255, 128, 0.1));
+    filter: drop-shadow(0 20px 13px rgba(151, 255, 128, 0.09))
+        drop-shadow(0 8px 5px rgb(151, 255, 128, 0.1));
 }
 
 .review-card:nth-child(even) {
