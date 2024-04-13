@@ -64,6 +64,6 @@ export const About = () => {
 
 const Picture = ({ img, hoverImg, classNames, mouseEnter, mouseLeave }) => {
     return (
-        <div className={`w-[300px] h-[300px] bg-[url('../public${img}')] hover:bg-[url('../public${hoverImg}')] bg-cover rounded-xl ${classNames}`} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}></div>
+        <div className={`w-[300px] h-[300px] bg-[url('/public${img}')] hover:bg-[url('/public${hoverImg}')] bg-cover rounded-xl ${classNames}`} onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}></div>
     )
 }
