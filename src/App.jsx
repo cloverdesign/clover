@@ -1,9 +1,8 @@
-import { Outlet, ScrollRestoration } from "react-router-dom"
-import { Layout } from "./components/layouts/layout"
-import ScrollToTop from "./components/global/scrollToTop"
+import { Outlet, ScrollRestoration } from "react-router-dom";
+import { Layout } from "./components/layouts/layout";
+import ScrollToTop from "./components/global/scrollToTop";
 
 function App() {
-
   return (
     <div className="relative">
       <ScrollRestoration />
@@ -12,7 +11,7 @@ function App() {
         <Outlet />
       </Layout>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
