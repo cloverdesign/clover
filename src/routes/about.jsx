@@ -70,21 +70,26 @@ export const About = () => {
         </div>
       </section>
 
-      <section
-        className="flex flex-wrap justify-center gap-10 text-center"
-        id="the-team"
-      >
-        {team.map((member) => (
-          <div id={member.id} key={member.id}>
-            <Picture
-              img={member.first_pic}
-              hoverImg={member.second_pic}
-              classNames="mb-5"
-            />
-            <h4 className="font-display">{member.name}</h4>
-            <p className="font-thin text-sm text-grey">{member.role}</p>
-          </div>
-        ))}
+      <section id="the-team">
+        <div className="group relative mb-10">
+          <span className="bg-green-500 group-hover:rotate-[8deg] transition duration-500 ease-in-out text-black p-2 rounded-lg absolute -rotate-[8deg] -top-2 text-xs lg:text-base">
+            design culprits
+          </span>
+          <h1 className="w-full">The Team</h1>
+        </div>
+        <div className="flex flex-wrap justify-center gap-10 text-center">
+          {team.map((member) => (
+            <div id={member.id} key={member.id}>
+              <Picture
+                img={member.first_pic}
+                hoverImg={member.second_pic}
+                classNames="mb-5"
+              />
+              <h4 className="font-display">{member.name}</h4>
+              <p className="font-thin text-sm text-grey">{member.role}</p>
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );
@@ -112,11 +117,5 @@ const Picture = ({ img, hoverImg, classNames }) => {
         }}
       ></div>
     </div>
-
-    // <img
-    //   loading="lazy"
-    //   src={img}
-    //   className={`w-[300px] h-[300px] rounded-xl object-cover ${classNames}`}
-    // />
   );
 };
