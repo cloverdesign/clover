@@ -94,7 +94,7 @@ const Picture = ({ img, hoverImg, classNames }) => {
   return (
     <div className="group">
       <div
-        className={`w-[500px] h-[500px] bg-team group-hover:hidden hover:bg-team-hover bg-cover rounded-xl ${classNames}`}
+        className={`w-[400px] h-[400px] bg-team group-hover:hidden hover:bg-team-hover bg-cover rounded-xl ${classNames}`}
         style={{
           backgroundImage: `url(${img})`,
           backgroundSize: "cover",
@@ -103,7 +103,7 @@ const Picture = ({ img, hoverImg, classNames }) => {
         }}
       ></div>
       <div
-        className={`w-[500px] h-[500px] bg-cover group-hover:flex hidden rounded-xl ${classNames}`}
+        className={`w-[400px] h-[400px] bg-cover group-hover:flex hidden rounded-xl ${classNames}`}
         style={{
           backgroundImage: `url(${hoverImg})`,
           backgroundSize: "cover",
