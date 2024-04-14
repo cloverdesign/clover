@@ -115,6 +115,8 @@ export const WorkData = [
       "/assets/stax/st9.webp",
       "/assets/stax/st10.webp",
       "/assets/stax/st11.gif",
+      "/assets/stax/st12.gif",
+      "/assets/stax/st13.mp4",
     ],
     header: "/assets/stax/st1.webp",
     display: "/assets/stax/st1.webp",
