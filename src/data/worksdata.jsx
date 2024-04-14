@@ -1,5 +1,5 @@
-import helggImg from "../assets/home/helgg.jpg";
-import staxImg from "../assets/home/phone.png";
+import helggImg from "../assets/home/helgg.webp";
+import staxImg from "../assets/home/phone.webp";
 import avantVid from "../assets/home/avant.mp4";
 
 export const WorksData = [
@@ -28,7 +28,7 @@ export const WorksData = [
     tags: ["Branding", "Logo Design"],
     vid: avantVid,
     type: "vid",
-    url: "/works/avant",
+    url: "/works/avant-garde",
   },
 ];
 
