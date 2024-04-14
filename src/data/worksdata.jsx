@@ -1,86 +1,142 @@
-import helggImg from '../assets/home/helgg.jpg'
-import staxImg from '../assets/home/phone.png'
-import avantVid from '../assets/home/avant.mp4'
+import helggImg from "../assets/home/helgg.jpg";
+import staxImg from "../assets/home/phone.png";
+import avantVid from "../assets/home/avant.mp4";
 
 export const WorksData = [
-    {
-        id: 1,
-        title: "Helgg",
-        description: "Helgg Scooters LTD",
-        tags: ["Branding"],
-        img: helggImg,
-        type: "pic",
-        url: "/works/helgg"
-    },
-    {
-        id: 2,
-        title: "Stax",
-        description: '"Come. Learn, Grow."',
-        tags: ["Branding", "Logo Design", "Motion language"],
-        img: staxImg,
-        type: "pic",
-        url: "/works/stax"
-    },
-    {
-        id: 3,
-        title: "Avant-Garde",
-        description: "Foundation",
-        tags: ["Branding", "Logo Design"],
-        vid: avantVid,
-        type: "vid",
-        url: "/works/avant"
-    }
-]
+  {
+    id: 1,
+    title: "Helgg",
+    description: "Helgg Scooters LTD",
+    tags: ["Branding"],
+    img: helggImg,
+    type: "pic",
+    url: "/works/helgg",
+  },
+  {
+    id: 2,
+    title: "Stax",
+    description: '"Come. Learn, Grow."',
+    tags: ["Branding", "Logo Design", "Motion language"],
+    img: staxImg,
+    type: "pic",
+    url: "/works/stax",
+  },
+  {
+    id: 3,
+    title: "Avant-Garde",
+    description: "Foundation",
+    tags: ["Branding", "Logo Design"],
+    vid: avantVid,
+    type: "vid",
+    url: "/works/avant",
+  },
+];
 
 export const WorkData = [
-    {
-        id: 0,
-        workTitle: 'helgg',
-        title: 'Helgg',
-        categories: ['Branding'],
-        description: "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
-        pictures: ['/assets/helgg/hg2.webp', '/assets/helgg/hg3.webp', '/assets/helgg/hg4.mp4', '/assets/helgg/hg4.webp', '/assets/helgg/hg5.webp', '/assets/helgg/hg6.webp', '/assets/helgg/hg7.webp', '/assets/helgg/hg8.webp'],
-        header: '/assets/helgg/hg1.webp',
-        display: '/assets/helgg/hg4.mp4'
-    },
-    {
-        id: 1,
-        workTitle: 'avant-garde',
-        title: 'Avant-Garde Foundation',
-        categories: ["Branding", "Logo Design"],
-        description: "Quoting Franklin D. Roosevelt, 'We cannot always build the future for our youth, but we can build the youth for the future.' Recognizing the importance of youth development for societal prosperity, the Avant Garde foundation has established a robust system to equip young individuals with essential skills for innovative progress. Envisioning a society where empowered youth actively contribute to a better future, our design task was clear: create a logo and visual identity that balances community warmth with professionalism. The circular logo symbolizes inclusivity, collaboration, and togetherness, while the wordmark, subtly sharpened for a corporate touch, blends youthful energy with a semi-formal approach. Mindful of potential partnerships and funding pursuits, we ensured a high level of professionalism in the design. The color palette, featuring Grape and Non-flash white, reflects Avant-Garde's growth-oriented ethos with a minimalist, simple, and relatable aesthetic.",
-        pictures: ['/assets/avant/ag3.mp4', '/assets/avant/ag4.webp', '/assets/avant/ag5.webp', '/assets/avant/ag6.mp4', '/assets/avant/ag6.mp4', '/assets/avant/ag7.webp', '/assets/avant/ag8.webp', '/assets/avant/ag9.webp', '/assets/avant/ag10.webp', '/assets/avant/ag11.webp', '/assets/avant/ag12.webp', '/assets/avant/ag13.webp'],
-        header: '/assets/avant/ag1.webp',
-        display: '/assets/avant/ag1.webp'
-    },
-    {
-        id: 2,
-        workTitle: 'plugin',
-        title: 'Plugin',
-        categories: ['Branding'],
-        description: "Introducing Plugin, the one-stop shop for all the talent you need. Clover was tasked with creating a visual identity that personifies the core values of Plugin which are, Integrity, Authenticity, Originality & Creativity. At the core of this identity system is the logo, which comprises a symbol inspired by a wall socket. The symbol and the word mark seamlessly harmonise to create what can be perceived as an innovative and creative brand. The team created a bespoke colour palette, a series of icons and pictograms, and a custom typeface. The brain behind this project, Olamide Kuforiji is out with a drive to create a beautifully complex ecosystem of talent, by birthing a marketplace where freelancers and recruiters can connect to value.",
-        pictures: ['/assets/plugin/pl2.webp', '/assets/plugin/pl2.mp4', '/assets/plugin/pl3.webp', '/assets/plugin/pl4.webp', '/assets/plugin/pl5.webp', '/assets/plugin/pl6.mp4', '/assets/plugin/pl7.webp', '/assets/plugin/pl8.webp'],
-        header: '/assets/plugin/pl1.webp',
-        display: '/assets/plugin/pl6.mp4'
-    },
-    {
-        id: 3,
-        workTitle: 'stax',
-        title: 'Stax',
-        categories: ['Branding'],
-        description: "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
-        pictures: ['/assets/stax/st2.gif', '/assets/stax/st3.webp', '/assets/stax/st4.webp', '/assets/stax/st5.webp', '/assets/stax/st6.webp', '/assets/stax/st7.webp', '/assets/stax/st8.webp', '/assets/stax/st9.webp', '/assets/stax/st10.webp'],
-        header: '/assets/stax/st1.webp',
-        display: '/assets/stax/st1.webp'
-    },
-    {
-        id: 4,
-        workTitle: 'pennywise',
-        title: 'Pennywise',
-        categories: ['Branding'],
-        description: "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
-        pictures: ['/assets/helgg/2.webp', '/assets/helgg/3.png', '/assets/helgg/4.mp4', '/assets/helgg/5.png', '/assets/helgg/6.png', '/assets/helgg/7.png', '/assets/helgg/8.png'],
-        header: '/assets/helgg/1.png',
-        display: '/assets/plugin/pl5.webp'
-    }
-]
+  {
+    id: 0,
+    workTitle: "helgg",
+    title: "Helgg",
+    categories: ["Branding"],
+    description:
+      "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
+    pictures: [
+      "/assets/helgg/hg2.webp",
+      "/assets/helgg/hg3.webp",
+      "/assets/helgg/hg4.mp4",
+      "/assets/helgg/hg4.webp",
+      "/assets/helgg/hg5.webp",
+      "/assets/helgg/hg6.webp",
+      "/assets/helgg/hg7.webp",
+      "/assets/helgg/hg8.webp",
+    ],
+    header: "/assets/helgg/hg1.webp",
+    display: "/assets/helgg/hg4.mp4",
+  },
+  {
+    id: 1,
+    workTitle: "avant-garde",
+    title: "Avant-Garde Foundation",
+    categories: ["Branding", "Logo Design"],
+    description:
+      "Quoting Franklin D. Roosevelt, 'We cannot always build the future for our youth, but we can build the youth for the future.' Recognizing the importance of youth development for societal prosperity, the Avant Garde foundation has established a robust system to equip young individuals with essential skills for innovative progress. Envisioning a society where empowered youth actively contribute to a better future, our design task was clear: create a logo and visual identity that balances community warmth with professionalism. The circular logo symbolizes inclusivity, collaboration, and togetherness, while the wordmark, subtly sharpened for a corporate touch, blends youthful energy with a semi-formal approach. Mindful of potential partnerships and funding pursuits, we ensured a high level of professionalism in the design. The color palette, featuring Grape and Non-flash white, reflects Avant-Garde's growth-oriented ethos with a minimalist, simple, and relatable aesthetic.",
+    pictures: [
+      "/assets/avant/ag3.mp4",
+      "/assets/avant/ag4.webp",
+      "/assets/avant/ag5.webp",
+      "/assets/avant/ag6.mp4",
+      "/assets/avant/ag6.mp4",
+      "/assets/avant/ag7.webp",
+      "/assets/avant/ag8.webp",
+      "/assets/avant/ag9.webp",
+      "/assets/avant/ag10.webp",
+      "/assets/avant/ag11.webp",
+      "/assets/avant/ag12.webp",
+      "/assets/avant/ag13.webp",
+    ],
+    header: "/assets/avant/ag1.webp",
+    display: "/assets/avant/ag1.webp",
+  },
+  {
+    id: 2,
+    workTitle: "plugin",
+    title: "Plugin",
+    categories: ["Branding"],
+    description:
+      "Introducing Plugin, the one-stop shop for all the talent you need. Clover was tasked with creating a visual identity that personifies the core values of Plugin which are, Integrity, Authenticity, Originality & Creativity. At the core of this identity system is the logo, which comprises a symbol inspired by a wall socket. The symbol and the word mark seamlessly harmonise to create what can be perceived as an innovative and creative brand. The team created a bespoke colour palette, a series of icons and pictograms, and a custom typeface. The brain behind this project, Olamide Kuforiji is out with a drive to create a beautifully complex ecosystem of talent, by birthing a marketplace where freelancers and recruiters can connect to value.",
+    pictures: [
+      "/assets/plugin/pl2.webp",
+      "/assets/plugin/pl2.mp4",
+      "/assets/plugin/pl3.webp",
+      "/assets/plugin/pl4.webp",
+      "/assets/plugin/pl5.webp",
+      "/assets/plugin/pl6.mp4",
+      "/assets/plugin/pl7.webp",
+      "/assets/plugin/pl8.webp",
+    ],
+    header: "/assets/plugin/pl1.webp",
+    display: "/assets/plugin/pl6.mp4",
+  },
+  {
+    id: 3,
+    workTitle: "stax",
+    title: "Stax",
+    categories: ["Branding"],
+    description:
+      "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
+    pictures: [
+      "/assets/stax/st2.gif",
+      "/assets/stax/st3.webp",
+      "/assets/stax/st4.webp",
+      "/assets/stax/st5.webp",
+      "/assets/stax/st6.webp",
+      "/assets/stax/st7.webp",
+      "/assets/stax/st8.webp",
+      "/assets/stax/st9.webp",
+      "/assets/stax/st10.webp",
+      "/assets/stax/st11.gif",
+    ],
+    header: "/assets/stax/st1.webp",
+    display: "/assets/stax/st1.webp",
+  },
+  {
+    id: 4,
+    workTitle: "pennywise",
+    title: "Pennywise",
+    categories: ["Branding"],
+    description:
+      "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
+    pictures: [
+      "/assets/pennywise/1.webp",
+      "/assets/pennywise/2.webp",
+      "/assets/pennywise/3.webp",
+      "/assets/pennywise/4.webp",
+      "/assets/pennywise/5.webp",
+      "/assets/pennywise/6.webp",
+      "/assets/pennywise/7.svg",
+      "/assets/pennywise/8.webp",
+    ],
+    header: "/assets/pennywise/2.webp",
+    display: "/assets/pennywise/1.webp",
+  },
+];

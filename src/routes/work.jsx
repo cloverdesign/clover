@@ -65,7 +65,7 @@ export const Work = () => {
             ))}
           </ul>
         </div>
-        <p className="lg:text-2xl font-thin text-grey">
+        <p className="lg:text-xl font-thin text-grey">
           {currentProject.description}
         </p>
       </div>
