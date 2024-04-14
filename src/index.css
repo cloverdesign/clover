@@ -85,3 +85,7 @@ html.lenis {
 .lenis.lenis-scrolling iframe {
     pointer-events: none;
 }
+
+.preloader {
+    z-index: 9999;
+}
