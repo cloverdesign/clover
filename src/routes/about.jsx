@@ -70,26 +70,30 @@ export const About = () => {
         </div>
       </section>
 
-      <section id="the-team">
-        <div className="group relative mb-10">
-          <span className="bg-green-500 group-hover:rotate-[8deg] transition duration-500 ease-in-out text-black p-2 rounded-lg absolute -rotate-[8deg] -top-2 text-xs lg:text-base">
-            design culprits
+      <section id="the-team" className="flex flex-wrap gap-10 justify-center">
+        <div className="group mb-10 w-[200px] lg:w-[400px] place-content-center">
+          <span className="relative">
+            <span className="bg-green-500 group-hover:rotate-[8deg] transition duration-500 ease-in-out text-black p-2 rounded-lg absolute -rotate-[8deg] -top-8 left-0 text-xs lg:text-base">
+              design culprits
+            </span>
+            <h1 className="lg:w-[50%] w-full leading-none">The Team</h1>
           </span>
-          <h1 className="w-full">The Team</h1>
+          <p className="font-thin mt-10 text-xs lg:text-base">
+            We are a team of creatives who are excited about unique ideas and
+            help brands to create amazing identities.
+          </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-10 text-center">
-          {team.map((member) => (
-            <div id={member.id} key={member.id}>
-              <Picture
-                img={member.first_pic}
-                hoverImg={member.second_pic}
-                classNames="mb-5"
-              />
-              <h4 className="font-display">{member.name}</h4>
-              <p className="font-thin text-sm text-grey">{member.role}</p>
-            </div>
-          ))}
-        </div>
+        {team.map((member) => (
+          <div id={member.id} key={member.id}>
+            <Picture
+              img={member.first_pic}
+              hoverImg={member.second_pic}
+              classNames="mb-5"
+            />
+            <h4 className="font-display max-w-[200px]">{member.name}</h4>
+            <p className="font-thin text-sm text-grey">{member.role}</p>
+          </div>
+        ))}
       </section>
     </div>
   );
@@ -99,7 +103,7 @@ const Picture = ({ img, hoverImg, classNames }) => {
   return (
     <div className="group">
       <div
-        className={`w-[400px] h-[400px] bg-team group-hover:hidden hover:bg-team-hover bg-cover rounded-xl ${classNames}`}
+        className={`lg:w-[400px] w-[200px] lg:h-[400px] h-[200px] bg-team group-hover:hidden hover:bg-team-hover bg-cover rounded-xl ${classNames}`}
         style={{
           backgroundImage: `url(${img})`,
           backgroundSize: "cover",
@@ -108,7 +112,7 @@ const Picture = ({ img, hoverImg, classNames }) => {
         }}
       ></div>
       <div
-        className={`w-[400px] h-[400px] bg-cover group-hover:flex hidden rounded-xl ${classNames}`}
+        className={`lg:w-[400px] w-[200px] lg:h-[400px] h-[200px] bg-cover group-hover:flex hidden rounded-xl ${classNames}`}
         style={{
           backgroundImage: `url(${hoverImg})`,
           backgroundSize: "cover",

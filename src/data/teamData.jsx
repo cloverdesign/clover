@@ -41,4 +41,18 @@ export const TeamData = [
     first_pic: "/assets/about/ara1.webp",
     second_pic: "/assets/about/ara2.webp",
   },
+  {
+    id: 7,
+    name: "Aramide Adeyemo",
+    role: "Graphic Designer",
+    first_pic: "/assets/about/ara1.webp",
+    second_pic: "/assets/about/ara2.webp",
+  },
+  {
+    id: 8,
+    name: "Aramide Adeyemo",
+    role: "Graphic Designer",
+    first_pic: "/assets/about/ara1.webp",
+    second_pic: "/assets/about/ara2.webp",
+  },
 ];
