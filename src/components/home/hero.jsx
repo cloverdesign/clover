@@ -133,7 +133,7 @@ export const Hero = () => {
       <div className="flex flex-col items-center">
         <div className="flex items-end" ref={container}>
           <Link
-            to="/about"
+            to="/contact"
             className="font-display text-[23vw] font-bold leading-none"
           >
             clover
