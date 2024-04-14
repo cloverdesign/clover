@@ -43,7 +43,6 @@ export const Footer = () => {
   ];
 
   const path = useLocation().pathname;
-  console.log(path);
 
   return (
     <footer className="w-[100vw] lg:h-[100vh] relative">

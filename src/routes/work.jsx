@@ -41,7 +41,6 @@ export const Work = () => {
   });
 
   let nextProject = works[currentProject.id + 1];
-  console.log(currentProject.id, works[currentProject.id + 1]);
 
   return (
     <section className="w-[100vw] pt-[50px] lg:pt-0 space-y-8 relative">
