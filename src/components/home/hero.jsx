@@ -151,7 +151,7 @@ export const Hero = () => {
           </span>
         </div>
         <p className="font-thin lg:text-2xl text-sm lg:w-5/5 w-3/5 text-center">
-          crafting timeless designs, one pixel at a time
+          elevating african business into timeless brands.
         </p>
       </div>
 
