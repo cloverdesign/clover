@@ -9,14 +9,14 @@ export const TeamData = [
   {
     id: 2,
     name: "Bisi-Adewale Praise",
-    role: "Co-Founder/ Director, Linkages and Admin",
+    role: "Co-Founder/Director, Linkages and Admin",
     first_pic: "",
     second_pic: "",
   },
   {
     id: 3,
     name: "Aramide Adeyemo",
-    role: "Head, Designer",
+    role: "Head, Design",
     first_pic: "/assets/about/ara1.webp",
     second_pic: "/assets/about/ara2.webp",
   },
