@@ -39,7 +39,7 @@ export const WorkData = [
     title: "Stax",
     categories: ["Branding"],
     description:
-      "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
+      "Stax is a youth development movement in Africa. They equip teens and young adults (13-30) with knowledge and skills to become leaders through conferences and training. Their goal is to empower young minds and cultivate a 'big thinker' mentality. Their branding reflects this, with a knowledge-based icon and bold fonts emphasizing empowerment and growth. The design system is adaptable for both digital and print use.",
     pictures: [
       "/assets/stax/st2.gif",
       "/assets/stax/st3.webp",
@@ -51,8 +51,9 @@ export const WorkData = [
       "/assets/stax/st9.webp",
       "/assets/stax/st10.webp",
       "/assets/stax/st11.gif",
-      "/assets/stax/st12.gif",
+      // "/assets/stax/st12.gif",
       "/assets/stax/st13.mp4",
+      "/assets/stax/st14.webp",
     ],
     header: "/assets/stax/st1.webp",
     display: "/assets/stax/st3.webp",
@@ -63,7 +64,7 @@ export const WorkData = [
     title: "Pennywise",
     categories: ["Branding"],
     description:
-      "Re-introducing Helgg Inc. A breath of fresh air in the Nigerian transportation industry that offers an easily accessible, affordable, and fun travel experience, providing its riders with a truly unique and outstanding journey. To represent the brand’s essence accurately,  Helgg Scooters has undergone a visual identity makeover. We created a new logo which features a bold 'H' mark that leans forward, symbolising the brand's mobility and flexibility. Additionally, the logo uses a subtle mint green colour to convey the environmentally conscious nature of the brand.",
+      "Pennywise helps people build wealth through smart money management. Their core idea: live below your means. This philosophy inspires their simple and friendly visual identity. The logo uses negative space and a penny icon for easy recall. The clean fonts and contrasting colors make Pennywise feel approachable and trustworthy. Their design adapts well to any platform. ",
     pictures: [
       "/assets/pennywise/1.webp",
       "/assets/pennywise/2.webp",
@@ -71,8 +72,12 @@ export const WorkData = [
       "/assets/pennywise/4.webp",
       "/assets/pennywise/5.webp",
       "/assets/pennywise/6.webp",
-      "/assets/pennywise/7.svg",
       "/assets/pennywise/8.webp",
+      "/assets/pennywise/9.webp",
+      "/assets/pennywise/10.webp",
+      "/assets/pennywise/11.webp",
+      "/assets/pennywise/12.webp",
+      "/assets/pennywise/13.gif",
     ],
     header: "/assets/pennywise/2.webp",
     display: "/assets/pennywise/1.webp",
