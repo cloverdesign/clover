@@ -40,7 +40,8 @@ export const Who = () => {
       ref={main}
     >
       <h1 className="leading-none text-center">
-        A diverse design agency passionate about creating digital experiences.
+        A diverse design studio passionate about crafting global identities for
+        unique brands.
       </h1>
       <Links
         icon={<Icon.HiArrowRight />}

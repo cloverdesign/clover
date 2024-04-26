@@ -15,12 +15,16 @@ function Preloader() {
   imgLoad.on("done", (instance) => {
     tl.fromTo(
       logo.current,
-      { scale: 2 },
       {
-        scale: 120,
+        scale: 1,
+        // width: "35px"
+      },
+      {
+        scale: 100,
+        // width: "100%",
         duration: 0.8,
         ease: "ease.out",
-        delay: 2,
+        delay: 1.5,
       },
     );
 
