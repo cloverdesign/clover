@@ -112,7 +112,7 @@ export const ServiceCard = ({ id, title, desc }) => {
                 <p className="text-sm">{desc}</p>
             </motion.span>
 
-            <a className="lg:hidden block underline font-extralight" href="/about">see more</a>
+            <a className="lg:hidden block underline font-extralight pointer-events-auto" href="/about">see more</a>
 
             <motion.span
                 className="bg-green-500 h-[70px] w-[70px] absolute rounded-full flex items-center justify-center border-[4px] border-black text-black  -top-10 -right-8"
