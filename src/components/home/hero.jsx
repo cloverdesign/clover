@@ -92,23 +92,6 @@ export const Hero = () => {
         ease: "ease.inOut",
       });
 
-      let video = self.selector(".video");
-
-      tl.current = gsap
-        .timeline()
-        .fromTo(
-          video,
-          {
-            autoAlpha: 0,
-          },
-          {
-            autoAlpha: 1,
-            duration: 0.2,
-            ease: "ease.inOut",
-          },
-        )
-        .reverse();
-
       return () => {
         if (!container.current) return;
         container.current.removeEventListener("mousemove", handleMouseMove);
@@ -121,7 +104,7 @@ export const Hero = () => {
 
   return (
     <section
-      className="mt-[70px] flex flex-col items-center h-[120vh] md:h-[200vh] lg:px-10 p-2 relative"
+      className="mt-[70px] flex flex-col items-center h-[50vh] md:h-[200vh] lg:px-10 p-2 relative"
       style={{
         backgroundImage: `url(${grid})`,
         backgroundSize: "100%",

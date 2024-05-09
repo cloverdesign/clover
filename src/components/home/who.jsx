@@ -36,10 +36,10 @@ export const Who = () => {
 
   return (
     <section
-      className="h-[100vh] text-black bg-green-500 flex flex-col items-center justify-center gap-8"
+      className="h-[50vh] mt-[200px] md:mt-0 md:h-[100vh] text-black bg-green-500 flex flex-col items-center justify-center gap-8"
       ref={main}
     >
-      <h1 className="leading-none text-center">
+      <h1 className="leading-none text-center p-2 lg:p-10">
         A diverse design studio passionate about crafting global identities for
         unique brands.
       </h1>

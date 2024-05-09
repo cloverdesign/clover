@@ -73,15 +73,15 @@ export const Work = () => {
       </ul>
       <div className="p-2 bg-black sticky bottom-0 text-white grid grid-cols-3 justify-center items-center">
         <Magnetic>
-          <Link className="flex gap-2 items-center" to={"/works"}>
+          <Link className="flex gap-2 items-center text-xs lg:text-base" to={"/works"}>
             <HeroIcons.HiArrowLeft /> our work
           </Link>
         </Magnetic>
-        <h3 className="place-self-center text-base">{currentProject.title}</h3>
+        <h3 className="place-self-center text-xs lg:text-base">{currentProject.title}</h3>
         {nextProject ? (
           <Magnetic>
             <Link
-              className="flex gap-2 items-center justify-self-end"
+              className="flex gap-2 items-center text-xs lg:text-base justify-self-end"
               to={"/works/" + nextProject.workTitle}
             >
               {nextProject.workTitle} <HeroIcons.HiArrowRight />{" "}

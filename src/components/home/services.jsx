@@ -32,7 +32,7 @@ export const Services = () => {
                 <div className="bg-black h-full w-[35%] flex items-center justify-center">
                     <h1 className="lg:leading-[80px] leading-none header top-[100px]">Our<br />Services.</h1>
                 </div>
-                <div className="flex md:flex-row flex-col items-center overflow-x-scroll gap-10 w-[65%] h-full scroll-smooth" ref={slider}>
+                <div className="flex md:flex-row flex-col items-center overflow-x-scroll gap-10 lg:w-[65%] h-full scroll-smooth" ref={slider}>
                     {ServicesData.map((item) => (
                         <ServiceCard key={item.id} id={item.id} title={item.title} desc={item.description} />)
                     )}
@@ -97,7 +97,7 @@ export const ServiceCard = ({ id, title, desc }) => {
 
     return (
         <motion.a
-            className="bg-green-500 group w-[250px] md:min-w-[300px] md:h-[300px] pointer-events-none md:pointer-events-auto hover:h-[450px] text-black p-10 rounded-xl transiton ease-in-out duration-300 relative"
+            className="bg-green-500 group w-[200px] md:min-w-[300px] md:h-[300px] pointer-events-none md:pointer-events-auto hover:h-[450px] text-black p-10 rounded-xl transiton ease-in-out duration-300 relative"
             variants={parentVariants}
             initial="variantA"
             whileHover="variantB"
