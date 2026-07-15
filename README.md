@@ -1,8 +1,43 @@
-# React + Vite
+# Clover
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marketing site for Clover — a design studio elevating African businesses into
+timeless brands.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Next.js 15](https://nextjs.org/) (App Router) + React 19
+- TypeScript
+- Tailwind CSS 3
+- [Framer Motion](https://www.framer.com/motion/) + [GSAP](https://gsap.com/) for animation
+- Deployed on Vercel
+
+## Getting started
+
+Requires Node 18+ and [pnpm](https://pnpm.io/).
+
+```bash
+pnpm install
+pnpm dev        # start the dev server at http://localhost:3000
+```
+
+## Scripts
+
+| Command          | Description                    |
+| ---------------- | ------------------------------ |
+| `pnpm dev`       | Start the development server   |
+| `pnpm build`     | Create a production build      |
+| `pnpm start`     | Serve the production build     |
+| `pnpm lint`      | Run ESLint (`next lint`)       |
+| `pnpm typecheck` | Type-check with `tsc --noEmit` |
+
+## Structure
+
+```
+src/
+  app/            Routes (App Router): /, /about, /works, /works/[id], /contact
+  components/     UI components (global + home sections)
+  animations/     Reusable animation helpers (Magnetic)
+  data/           Static content (works, team, services, testimonials)
+  hooks/          Custom hooks
+public/assets/    Images and video
+```

@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+/*
+ * `inline` matters here: the font families reference CSS variables that
+ * next/font defines on <body> (e.g. --font-unbounded), not on :root. A plain
+ * @theme would compile these to a --font-display variable on :root, where
+ * --font-unbounded is undefined, so it would fall back to sans-serif. `inline`
+ * instead substitutes the value straight into the utility
+ * (font-family: var(--font-unbounded), ...), which resolves per-element via
+ * inheritance from <body>. This is the documented Next.js + Tailwind v4 pattern.
+ */
+@theme inline {
+    --font-display: var(--font-unbounded), sans-serif;
+    --font-body: var(--font-lexend), sans-serif;
+}
+
+@theme {
+    --color-grey: #c6c6c6;
+    --color-green-500: #97ff80;
+
+    --animate-marquee: marquee 25s linear infinite;
+    --animate-marquee2: marquee2 25s linear infinite;
+
+    @keyframes marquee {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes marquee2 {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+}
+
+/*
+ * Base styles live in @layer base so Tailwind utilities (a later layer) win
+ * over them. Without this layer the rules below are "unlayered" and would beat
+ * every utility — e.g. the universal margin/padding reset would nullify all
+ * spacing utilities. In Tailwind v3 (no native cascade layers) specificity
+ * handled this; v4 uses real layers, so we opt these resets into @layer base.
+ */
+@layer base {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: black;
+        color: white;
+    }
+
+    section {
+        margin-bottom: 100px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: var(--font-unbounded);
+        font-weight: 400;
+    }
+
+    h1 {
+        font-size: clamp(2.375rem, 1.625rem + 3.75vw, 5rem);
+    }
+
+    h2 {
+        font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+    }
+
+    h3 {
+        font-size: clamp(0.9375rem, 0.6696rem + 1.3393vw, 1.875rem);
+    }
+
+    a:hover {
+        filter: drop-shadow(0 20px 13px rgba(151, 255, 128, 0.09))
+            drop-shadow(0 8px 5px rgb(151, 255, 128, 0.1));
+    }
+
+    /*
+     * Tailwind v4's Preflight dropped these two button resets that v3 shipped.
+     * Restore them so bare buttons (e.g. the Services carousel arrows) stay
+     * transparent instead of showing the native UA button fill, and keep the
+     * pointer cursor.
+     */
+    button {
+        background-color: transparent;
+        background-image: none;
+    }
+
+    button,
+    [role="button"] {
+        cursor: pointer;
+    }
+
+    button:disabled {
+        cursor: default;
+    }
+}
+
+/*
+ * These intentionally override utilities (matching v3, where they won on
+ * specificity), so they stay unlayered. `rotate` is used instead of
+ * `transform: rotate()` because v4's rotate-* utilities set the `rotate`
+ * property — using the same property here lets these override it cleanly
+ * rather than compounding into a combined rotation.
+ */
+::selection {
+    background: rgba(44, 254, 2, 0.361);
+}
+
+.review-card:nth-child(even) {
+    background-color: #fff;
+    color: #000;
+    rotate: -5deg;
+}
+
+.review-card:nth-child(3) {
+    rotate: 5deg;
+}
+
+.preloader {
+    z-index: 9999;
+}
